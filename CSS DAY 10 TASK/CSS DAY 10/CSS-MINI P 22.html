@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-P-18</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            color:white;
+            background-color: black;
+            text-align: center;
+        }
+        .home{
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            grid-template-rows: 600px ;
+            gap: 20px;
+
+        }
+        .side{
+          
+            background-color: black;
+           
+        }
+        .bar{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 30px;
+            gap: 20px;
+           
+        }
+        .side p{
+            border:2px solid black;
+            text-align: center;
+            background-color: grey;
+            opacity: .5;
+            justify-content: space-around;
+            margin-top: 10px;
+            color: white;
+        }
+        .bar p{
+            border:2px solid black;
+            text-align: center; 
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Dashboard</h1></header>
+    
+    <section class="home">
+        <div class="side">
+            <p>Home</p>
+            <p>Analytics</p>
+            <p>Settings</p>
+            
+        </div>
+        <div class="main">
+            <h2><b>Main Content</b></h2>
+            <br>
+          
+            <div class="bar">
+                <p>Card 1</p>
+                <p>Card 2</p>
+                <p>Card 3</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

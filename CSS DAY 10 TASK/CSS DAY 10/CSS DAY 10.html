@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS DAY 10 TASKS</title>
+    <style>
+        .A{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,30px);
+        }
+        .a,.b,.c,.d,.e{
+            border: 2px solid black;
+        }
+       
+        
+        .B{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,30px);
+            
+        }
+        .B .a{
+            grid-column: 1/ span 2 ;
+        }
+        .C{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,30px);
+            
+        }
+        .C .a{
+            grid-row: 1/ span 2 ;
+        }
+        .D{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,30px);
+            
+        }
+        .D .a{
+            grid-area: 1/1/4/4 ;
+        }
+        .E{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,30px);
+            
+        }
+        .E .b{
+            grid-area: 1/2/4/4 ;
+        }
+        .E .a{
+            grid-row: 2/ span 4;
+        }
+        .E .e{
+            grid-column: 1/ span 4;
+        }
+        .F{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,30px);
+            gap:10px;
+        }
+        .G{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,30px);
+            gap:10px; 
+            border: 2px solid black;
+        }
+        .g{
+            border: 2px solid black;
+            margin-top: 10px;
+        }
+        .H{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,30px);
+            gap:10px; 
+            border: 2px solid black;
+        }
+        .h{
+            display: flex;
+            flex-wrap: wrap;
+            border: 2px solid black;
+            margin-top: 10px;
+        }
+        .I{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,60px);
+            gap:10px; 
+            border: 2px solid black;
+        }
+        .i{ 
+            height: 50px;
+            border: 2px solid black;
+            margin-top: 10px;
+        }
+        .J{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,30px);
+            
+        }
+        .J .b{
+            grid-area: 1/2/4/4 ;
+        }
+        .J .a{
+            grid-row: 2/ span 4;
+        }
+        .J .e{
+            grid-column: 1/ span 4;
+        }
+        .K{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,30px);
+            gap:10px; 
+            border: 2px solid black;
+        }
+        .k{
+           
+            border: 2px solid black;
+            margin-top: 10px;
+        }
+        .L{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,30px);
+            
+        }
+        .L .b{
+            grid-area: 1/2/4/4 ;
+        }
+        .L .a{
+            grid-row: 2/ span 4;
+        }
+        .L .e{
+            grid-column: 1/ span 4;
+        }
+        .M{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,50px);
+            gap:10px; 
+            border: 2px solid black;
+        }
+        .m{
+           
+            border: 2px solid black;
+            margin-top: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>CSS DAY 10 TASKS</h1>
+    <h3>CSS 118</h3>
+   <div class="A">
+    <div class="a">1</div>
+    <div class="a">2</div>
+    <div class="a">3</div>
+    <div class="a">4</div>
+    <div class="a">5</div>
+    <div class="a">6</div>
+    <div class="a">7</div>
+    <div class="a">8</div>
+    <div class="a">9</div>
+
+   </div>
+   <hr>
+   <h3>CSS 119</h3>
+   <div class="B">
+    <div class="a">1</div>
+    <div class="b">2</div>
+    <div class="c">3</div>
+    <div class="d">4</div>
+    <div class="d">5</div>
+    <div class="d">6</div>
+    <div class="d">7</div>
+   
+
+   </div>
+   <hr>
+   <h3>CSS 120</h3>
+   <div class="C">
+    <div class="a">1</div>
+    <div class="b">2</div>
+    <div class="c">3</div>
+    <div class="d">4</div>
+    <div class="d">5</div>
+    <div class="d">6</div>
+    <div class="d">7</div>
+   
+
+   </div>
+   <hr>
+   <h3>CSS 121</h3>
+   <div class="D">
+    <div class="a">1</div>
+    <div class="b">2</div>
+    <div class="c">3</div>
+    <div class="d">4</div>
+    <div class="d">5</div>
+    <div class="d">6</div>
+    <div class="d">7</div>
+    <div class="d">7</div>
+    <div class="d">7</div>
+   </div>
+   <hr>
+   <h3>CSS 122</h3>
+   <div class="E">
+    <div class="a">SIDEBAR</div>
+    <div class="b">HEADER</div>
+    <div class="c">3</div>
+    <div class="d">4</div>
+    <div class="d">5</div>
+    <div class="d">6</div>
+    <div class="d">7</div>
+    <div class="d">7</div>
+    <div class="d">7</div>
+    <div class="d">7</div>
+    <div class="d">7</div>
+    <div class="d">7</div>
+    <div class="e">FOOTER</div>
+   </div>
+   <hr>
+   <h3>CSS 123</h3>
+   <div class="F">
+    <div class="a">1</div>
+    <div class="b">2</div>
+    <div class="c">3</div>
+    <div class="d">4</div>
+    <div class="d">5</div>
+    <div class="d">6</div>
+    <div class="d">7</div>
+   
+
+   </div>
+   <hr>
+   <h3>CSS 124</h3>
+    <div class="G">
+        <div class="g"></div>         
+        
+        <div class="g">    </div>
+    </div>
+    <hr>
+    <h3>CSS 125</h3>
+    <div class="H">
+        <div class="h"></div>         
+        
+        <div class="h">    </div>
+    </div>
+    <hr>
+    <h3>CSS 126</h3>
+    <div class="I">
+        <div class="i">IMAGE</div>         
+        
+        <div class="i"> IMAGE   </div>
+    </div>
+    <hr>
+    <h3>CSS 127</h3>
+    <div class="J">
+     <div class="a">SIDEBAR</div>
+     <div class="b">HEADER</div>
+     <div class="c">3</div>
+     <div class="d">4</div>
+     <div class="d">5</div>
+     <div class="d">6</div>
+     <div class="d">7</div>
+     <div class="d">7</div>
+     <div class="d">7</div>
+     
+     <div class="e">FOOTER</div>
+    </div>
+    <hr>
+    <h3>CSS 128</h3>
+    <div class="K">
+        <div class="k"></div>         
+        
+        <div class="k">    </div>
+    </div>
+    <hr>
+    <h3>CSS 129</h3>
+    <div class="L">
+     <div class="a">One</div>
+     <div class="b">Two</div>
+     <div class="c">3</div>
+     <div class="d">4</div>
+     <div class="d">5</div>
+     <div class="d">6</div>
+     <div class="d">7</div>
+     <div class="d">7</div>
+     <div class="d">7</div>
+     
+     <div class="e">End</div>
+    </div>
+    <hr>
+    <hr>
+    <h3>CSS 130</h3>
+    <div class="M">
+        <div class="m"></div>         
+        
+        <div class="m">    </div>
+        <div class="m">    </div>
+    </div>
+    <hr>
+</body>
+</html>
