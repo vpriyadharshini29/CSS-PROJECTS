@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS DAY 11 TASKS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+
+        ._131 {
+            height: 150px;
+            width: 150px;
+            background-color: pink;
+            position: static;
+            border: 2px solid black;
+        }
+
+        ._132 {
+            height: 150px;
+            width: 150px;
+            background-color: pink;
+            position: relative;
+            top: 7px;
+            left: 7px;
+            border: 2px solid black;
+        }
+
+        ._133 {
+            height: 150px;
+            width: 150px;
+            background-color: rgb(200, 81, 101);
+            position: relative;
+            top: 1px;
+            left: 1px;
+            border: 2px solid black;
+        }
+
+        ._133-1 {
+            height: 100px;
+            width: 100px;
+            background-color: pink;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border: 2px solid black;
+        }
+
+        ._134 {
+            height: 50px;
+            width: 450px;
+            background-color: pink;
+            position: fixed;
+            float: right;
+            border: 2px solid black;
+            text-decoration: none;
+            color: black;
+            text-align: end;
+            z-index: 4;
+            margin-left: 70%;
+        }
+
+        ._135 {
+            height: 150px;
+            width: 150px;
+            position: sticky;
+            top: 0;
+            padding: 5px;
+            background-color: #cae8ca;
+            border: 2px solid #4CAF50;
+
+        }
+
+        ._136 {
+            display: flex;
+            height: 400px;
+            width: 450px;
+            position: relative;
+
+        }
+
+        ._136-1 {
+            height: 350px;
+            width: 100%;
+            position: static;
+            object-fit: cover;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+            border: 2px solid black;
+        }
+
+        ._136-2 {
+            height: 250px;
+            width: 250px;
+
+
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+            border: 2px solid black;
+        }
+
+        ._137 {
+
+            height: 150px;
+            width: 100%;
+
+            position: static;
+
+            border: 2px solid black;
+
+        }
+
+        ._137:hover {
+            background-color: aliceblue;
+
+        }
+
+        ._137::after {
+            content: "Peafowl is a common name for two bird species of the genus Pavo and one species of the closely related genus Afropavo";
+        }
+
+        ._138 {
+            height: 150px;
+            width: 150px;
+            background-color: rgb(200, 81, 101);
+            position: relative;
+            top: 1px;
+            left: 1px;
+            border: 2px solid black;
+        }
+
+        ._138-1 {
+            height: 30px;
+            width: 30px;
+            background-color: pink;
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+            border: 2px solid black;
+        }
+
+        ._139 {
+            height: 30px;
+            width: 100%;
+            background-color: palegreen;
+            position: fixed;
+            bottom: 0;
+
+            border: 1px solid greenyellow;
+        }
+
+        ._140 {
+            height: 50px;
+            width: 100%;
+
+            position: relative;
+            top: 1px;
+            left: 1px;
+
+            border: 2px solid black;
+        }
+
+        ._140-1 {
+            height: 50px;
+            width: 100%;
+
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            border: 2px solid black;
+        }
+
+        ._141 {
+            height: 50px;
+            width: 50px;
+            background-color: pink;
+            position: sticky;
+            bottom: 10px;
+            left: 0;
+            border: 2px solid black;
+            text-decoration: none;
+            color: black;
+            text-align: end;
+            z-index: 4;
+            margin-left: 70%;
+        }
+
+        ._142 {
+
+        height: 150px;
+        width: 30%;
+        background-image: url(./Assets/Images/dot.jpg);
+        position: fixed;
+        bottom: 30px;
+        float: right;
+        border: 2px solid black;
+
+        margin-left: 70%;
+
+        }
+        ._143 {
+            display: flex;
+            height: 400px;
+            width: 450px;
+            position: relative;
+
+        }
+
+     
+
+        ._143-1 {
+            height: 350px;
+            width: 100%;
+            position: static;
+            object-fit: cover;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+            border: 2px solid black;
+        }
+
+        ._143-2 {
+            height: 250px;
+            width: 250px;
+
+
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>CSS DAY 11 TASKS</h1>
+    </header>
+    <hr>
+    <h4>CSS 131: Create a static element and observe how it behaves in the normal document flow.</h4>
+    <div class="_131">
+        <p>1</p>
+    </div>
+    <hr>
+    <h4>CSS 132: Create a relative element and offset it using top and left.</h4>
+    <div class="_132">
+        <p>1</p>
+    </div>
+    <hr>
+    <h4>CSS 133: Add an absolute element inside a relative parent and position it in the bottom-right corner.</h4>
+    <div class="_133">
+        <div class="_133-1">
+            <p>1</p>
+        </div>
+
+    </div>
+    <hr>
+    <h4>CSS 134: Create a fixed navigation bar that stays visible when scrolling.</h4>
+    <div class="_134">
+        <nav>
+            <a>134</a>
+            <a>Home |</a>
+            <a>Products |</a>
+            <a>Offers |</a>
+            <a>Contact Us</a>
+        </nav>
+    </div>
+    <hr>
+    <br>
+    <h4>CSS 135: Add a sticky header that sticks to the top of the viewport when scrolling.</h4>
+    <div class="_135">
+        <p>135</p>
+    </div>
+    <hr>
+
+    <h4>CSS 136: Use z-index to position overlapping elements </h4>
+    <div class="_136">
+        <div class="_136-1"><img src="./Assets/Images/flute.jpg" height="350px" width="100%"></img></div>
+        <div class="_136-2"><img src="./Assets/Images/krishnan.jpg" height="250px" width="250px"></img></div>
+    </div><br>
+    <hr>
+    <h4>CSS 137: Create a highlighted text that reveals additional info on hover using ::after pseudo-element</h4>
+    <div class="_137">
+        <p>Paefowl</p>
+
+    </div>
+    <h4>CSS 138: Build a modal window with absolute positioning and center it using transform.</h4>
+    <div class="_138">
+        <div class="_138-1">
+            <p>1</p>
+        </div>
+
+    </div>
+    <hr>
+    <h4>CSS 139: Position a footer at the bottom of the viewport using fixed.</h4>
+    <div class="_139">
+        <h2> 139 FOOTER</h2>
+    </div>
+    <hr>
+    <div class="_140">
+        <div class="_140-1">
+            <label for="cars">Choose a car:</label>
+
+            <select name="cars" id="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </select>
+        </div>
+
+    </div>
+    <h4> CSS 141: Add a sticky sidebar that remains visible while scrolling through content.</h4>
+    <div class="_141">
+        <div>stuck</div>
+    </div>
+
+    <hr>
+    <h4>CSS 142:full screen with fixed position</h4>
+    <div class="_142">
+        CSS 142
+    </div>
+    <hr>
+    <h4>CSS 143:combine relative absolute and z-index</h4>
+    <div class="_143">
+
+        <div class="_143-1"><img src="./Assets/Images/krishnan.jpg" height="350px" width="100%"></img></div>
+        <div class="_143-2"><img src="./Assets/Images/flute.jpg" height="250px" width="250px"></img></div>
+    </div><br>
+    <hr>
+
+    </div>
+</body>
+
+</html>

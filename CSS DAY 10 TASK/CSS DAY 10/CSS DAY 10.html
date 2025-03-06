@@ -6,18 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS DAY 10 TASKS</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        /* CSS 118 */
         .A{
             display: grid;
             grid-template-columns: repeat(3,1fr);
             grid-template-rows: repeat(3,30px);
             gap: 10px;
         }
-        .a,.b,.c,.d,.e{
+        .a,.b,.c,.d,.e,.g,.h,.k,.i{
             border: 2px solid black;
-            background-color: blueviolet;
+            background-color: palegoldenrod;
 
         }
-       
+       /* CSS 119 */
         
         .B{
             display: grid;
@@ -29,6 +36,7 @@
         .B .a{
             grid-column: 1/ span 2 ;
         }
+        /* CSS 120 */
         .C{
             display: grid;
             grid-template-columns: repeat(3,1fr);
@@ -39,51 +47,61 @@
         .C .a{
             grid-row: 1/ span 2 ;
         }
+        /* CSS 121 */
         .D{
             display: grid;
             grid-template-columns: repeat(3,1fr);
             grid-template-rows: repeat(3,30px);
+            gap: 10px;
             
         }
         .D .a{
             grid-area: 1/1/4/4 ;
         }
+        /* CSS 122 */
         .E{
             display: grid;
-            grid-template-columns: repeat(3,1fr);
-            grid-template-rows: repeat(3,30px);
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 170PX;
+            gap: 10px;
             
         }
-        .E .b{
-            grid-area: 1/2/4/4 ;
+        .E .a,.c{
+            height: 20px;
         }
-        .E .a{
-            grid-row: 2/ span 4;
-        }
-        .E .e{
-            grid-column: 1/ span 4;
-        }
+       
+        /* CSS 123 */
         .F{
             display: grid;
             grid-template-columns: repeat(3,1fr);
             grid-template-rows: repeat(3,30px);
             gap:10px;
         }
+        /* CSS 124 */
         .G{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: repeat(2,70px);
+            gap:10px; 
+            border: 2px solid black;
+        }
+        .g{
             display: grid;
             grid-template-columns: repeat(2,1fr);
             grid-template-rows: repeat(2,30px);
             gap:10px; 
             border: 2px solid black;
+            margin-top: 10px;
         }
-        .g{
+        .g1{
             border: 2px solid black;
             margin-top: 10px;
         }
+        /* CSS 125 */
         .H{
             display: grid;
             grid-template-columns: repeat(2,1fr);
-            grid-template-rows: repeat(2,30px);
+            grid-template-rows: repeat(2,70px);
             gap:10px; 
             border: 2px solid black;
         }
@@ -93,10 +111,16 @@
             border: 2px solid black;
             margin-top: 10px;
         }
+        .h1{
+            width: 40px;
+            border: 2px solid black;
+            margin-top: 10px;
+        }
+        /* CSS 126 */
         .I{
             display: grid;
             grid-template-columns: repeat(2,1fr);
-            grid-template-rows: repeat(2,60px);
+            grid-template-rows: 100px;
             gap:10px; 
             border: 2px solid black;
         }
@@ -105,21 +129,18 @@
             border: 2px solid black;
             margin-top: 10px;
         }
+        /* CSS 127 */
         .J{
             display: grid;
-            grid-template-columns: repeat(3,1fr);
-            grid-template-rows: repeat(3,30px);
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 170PX;
+            gap: 10px;
             
         }
-        .J .b{
-            grid-area: 1/2/4/4 ;
+        .J .a,.c{
+            height: 20px;
         }
-        .J .a{
-            grid-row: 2/ span 4;
-        }
-        .J .e{
-            grid-column: 1/ span 4;
-        }
+        /* CSS 128 */
         .K{
             display: grid;
             grid-template-columns: repeat(2,1fr);
@@ -132,10 +153,12 @@
             border: 2px solid black;
             margin-top: 10px;
         }
+        /* CSS 129 */
         .L{
             display: grid;
             grid-template-columns: repeat(3,1fr);
             grid-template-rows: repeat(3,30px);
+            gap: 10px;
             
         }
         .L .b{
@@ -147,6 +170,7 @@
         .L .e{
             grid-column: 1/ span 4;
         }
+        /* CSS 130 */
         .M{
             display: grid;
             grid-template-columns: repeat(3,1fr);
@@ -206,7 +230,7 @@
    <hr>
    <h3>CSS 121</h3>
    <div class="D">
-    <div class="a">1</div>
+    <div class="a">HEADER</div>
     <div class="b">2</div>
     <div class="c">3</div>
     <div class="d">4</div>
@@ -218,21 +242,13 @@
    </div>
    <hr>
    <h3>CSS 122</h3>
+  
+   <div class="a">HEADER</div>
    <div class="E">
-    <div class="a">SIDEBAR</div>
-    <div class="b">HEADER</div>
-    
-    <div class="d">4</div>
-    <div class="d">5</div>
-    <div class="d">6</div>
-    <div class="d">7</div>
-    <div class="d">7</div>
-    <div class="d">7</div>
-    <div class="d">7</div>
-    <div class="d">7</div>
-    <div class="d">7</div>
-    <div class="e">FOOTER</div>
+    <div class="b">SIDEBAR</div>
+    <div class="b">MAINBAR</div>
    </div>
+   <div class="c">FOOTER</div>
    <hr>
    <h3>CSS 123</h3>
    <div class="F">
@@ -249,14 +265,20 @@
    <hr>
    <h3>CSS 124</h3>
     <div class="G">
-        <div class="g"></div>         
-        
+        <div class="g">
+            <div class="g1">1</div>
+            <div class="g1">2</div>
+        </div>         
+         
         <div class="g">    </div>
     </div>
     <hr>
     <h3>CSS 125</h3>
     <div class="H">
-        <div class="h"></div>         
+        <div class="h">
+            <div class="h1">1</div>
+            <div class="h1">2</div>
+        </div>         
         
         <div class="h">    </div>
     </div>
@@ -269,19 +291,13 @@
     </div>
     <hr>
     <h3>CSS 127</h3>
+    
+    <div class="a">HEADER</div>
     <div class="J">
-     <div class="a">SIDEBAR</div>
-     <div class="b">HEADER</div>
-     <div class="c">3</div>
-     <div class="d">4</div>
-     <div class="d">5</div>
-     <div class="d">6</div>
-     <div class="d">7</div>
-     <div class="d">7</div>
-     <div class="d">7</div>
-     
-     <div class="e">FOOTER</div>
+     <div class="b">SIDEBAR</div>
+     <div class="b">MAINBAR</div>
     </div>
+    <div class="c">FOOTER</div>
     <hr>
     <h3>CSS 128</h3>
     <div class="K">
