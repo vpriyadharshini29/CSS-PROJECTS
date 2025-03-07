@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS DAY 12 TASKS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ._144{
+            height: 50px;
+            width: 100%;
+            border: 2px solid black;
+            opacity: 0.5;    
+        }
+        ._145{
+            height:100px;
+            width:100%
+        }
+        ._145 button{
+         height: 20px;
+         width: 200px;
+            border: 2px solid black;
+            padding:auto;
+            transform: scale(2);
+        }
+        ._146{
+            height: 200px;
+            width: 260px;
+            border: 2px solid black;
+        
+        }
+        ._146 img:hover{
+            filter: grayscale(75%);
+        }
+        ._147{
+            height:75px;
+            width:75%;
+            background-color: aqua;
+            text-decoration: none;
+            border: 2px solid black;
+        }
+        ._147:hover{
+            filter: blur(100px);
+        }
+        ._148{
+            height: 200px;
+            width:260px;
+            border: 5px solid black;
+              
+        }
+        ._148:hover{
+            opacity: 0.1;
+        }
+        /* CSS 149 */
+        .spin{
+            height:200px;
+            width: 200px;
+            border: 2px solid black;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+        from { transform: rotateY(100deg); }
+        to { transform:rotateY(-100deg); }
+        }
+        ._150{
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+        
+        }
+        ._150 img:hover{
+            filter: brightness(150%);
+        }
+        ._151{
+            height:200px;
+            width: 200px;
+            border: 2px solid black;
+            animation: _151 1s linear infinite;
+        }
+        @keyframes _151 {
+        from { transform: rotateX(100deg); }
+        to { transform:rotateY(-100deg); }
+        }
+        ._152{
+            height: 60px;
+            width: 300px;
+            border: 2px solid black;
+            animation: _152 5s infinite;
+            background-color: rgb(29, 236, 236);
+            text-align: center;
+        }
+      
+       @keyframes _152{
+            0%{
+                opacity: 0.1;
+            }
+            25%{
+                opacity: 0.5;
+            }
+            75%{
+                opacity: 0.75;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        ._153{
+            height:50px;
+            width: 100%;
+            border: 2px solid black;
+            animation: _153 10s linear infinite;
+            background-color: pink;
+        }
+        @keyframes _153 
+        {
+        from { transform: translateX(100%); }
+        to { transform:translateX(-100%); }
+        }
+        ._154{
+            height: 100px;
+            width: 100%;
+        }
+        ._154 button{
+            height: 70px;
+            width: 100px;
+            background-color: paleturquoise;
+            
+
+        }
+        ._154 button:hover{
+            filter: sepia(90%);
+        }
+          ._155{
+            height: 250px;
+            width: 250px;
+            border: 2px solid black;
+            animation: _155 5s infinite;
+           
+            
+        }
+      
+       @keyframes _155{
+            0%{
+                opacity: 0.1;
+            }
+            25%{
+                opacity: 0.5;
+            }
+            75%{
+                opacity: 0.75;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        ._156{
+            height: 300px;
+            width: 300px;
+            filter: drop-shadow(8px 8px 8px grey);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>CSS DAY 12 TASKS</h1>
+    </header>
+
+    <h4> CSS 144. Create a fading text effect with opacity.</h4>
+    <div class="_144">
+       <h2>FADING EFFECT ON TEXT</h2>
+    </div>
+    <hr>
+
+    <h4>CSS 145. Animate a button to grow in size using transform: scale().</h4>
+  <div class="_145">
+      <button>Grow in size</button>
+    </div>
+    <hr>
+
+    <h4>CSS 146. Apply a grayscale filter to an image on hover. </h4>
+    <div class="_146">
+        <img src="./Assets/Images/fae2.jpg" height="200px" width="250px"></img>
+    </div>
+    <hr>
+    <h4>CSS 147. Create a navigation bar with a hover blur effect. </h4>
+    <div class="_147">
+        <nav>
+            <a>Home |</a>
+            <a>Products |</a>
+            <a>Offers |</a>
+            <a>Contact Us</a>
+        </nav>
+    </div>
+    <hr>
+    <h4>CSS 148. Fade out an element when clicked using opacity.</h4>
+    <div class="_148">
+        <img src="./Assets/Images/fae3.avif" height="200px" width="250px"></img>
+    </div>
+    <h4>CSS 149. Design a flipping card with smooth transition.</h4>
+    <div class="spin">
+        <img src="./Assets/Images/fae3.avif" height="200px" width="200px"></img>
+    </div>
+    <h4>CSS 150. Add a brightness filter to images on hover.</h4>
+    <div class="_150">
+        <img src="./Assets/Images/fae4.webp" height="300px" width="300px"></img>
+    </div>
+    <hr>
+    <h4>CSS 151. Use @keyframes to rotate an icon continuously.</h4>
+    <div class="_151">
+        <img src="./Assets/Images/fae5.jpg" height="200px" width="200px"></img>
+    </div>
+    <hr>
+    <h4>CSS 152. Implement smooth fading text for a carousel.</h4>
+    <div class="_152">
+       <h2>FADING EFFECT</h2>
+    </div>
+    <hr>
+    <h4>CSS 153. Create a hover effect where text slides in with opacity.</h4>
+    <div class="_153">
+        <h2>TEXT SLIDE IN</h2>
+     </div>
+     <hr>
+    <h4>CSS 154. Apply a sepia filter to a button when hovered.</h4>
+     <div class="_154">
+        <button>Sepia filter</button>
+     </div>
+     <hr>
+    <h4>CSS 155. Use opacity to create a hidden image that fades in on hover.</h4>
+     <div class="_155">
+        <img src="./Assets/Images/fae5.jpg" height="250px"width="250px"></img>
+     </div>
+    <h4>CSS 156.Add a shadow filter to cards for a 3D effect.</h4>
+     <div class="_156">
+        <img src="./Assets/Images/fae2.jpg" height="250px" width="250px"></img>
+     </div>
+</body>
+
+</html>

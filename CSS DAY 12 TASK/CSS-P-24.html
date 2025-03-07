@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUTTON</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .buttons{
+            height: 350px;
+            width:800px;
+            background:linear-gradient(to right,white,paleturquoise);
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: space-around;
+        }
+        .primary button{
+            height: 70px;
+            width: 160px;
+            background-color: rgb(51, 72, 226);
+            
+
+        }
+        .primary button:hover{
+            filter: sepia(90%);
+            transform: scale(2);
+        }
+        .secondary button{
+            height: 70px;
+            width: 160px;
+           
+            background-color:green;
+            
+
+        }
+        .secondary button:hover{
+            filter: sepia(90%);
+            transform: scale(2);
+        }
+        .danger button{
+            height: 70px;
+            width: 160px;
+            
+            background-color: red;
+            
+
+        }
+        .danger button:hover{
+            filter: sepia(90%);
+            transform: scale(2);
+        }
+        .warning button{
+            height: 70px;
+            width: 160px;
+            
+            background-color: yellow;
+            
+
+        }
+        .warning button:hover{
+            filter: sepia(90%);
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+    <section class="buttons">
+        <div class="primary">
+            <button>Primary Button</button>
+         </div> 
+         <div class="secondary">
+            <button>Secondary button</button>
+         </div>
+          <div class="danger">
+            <button>Danger button</button>
+         </div>
+         <div class="warning">
+            <button>Warning Button</button>
+         </div>
+    </section>
+</body>
+</html>
