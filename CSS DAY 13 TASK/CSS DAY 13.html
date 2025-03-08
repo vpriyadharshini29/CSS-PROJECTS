@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS DAY 13 TASKS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ._157 {
+            height: 200px;
+            width: 100%;
+            border: 2px solid black;
+            background-color: pink;
+        }
+
+        @media screen and (max-width:600px) {
+            ._157 {
+                height: 100px;
+                width: 100%;
+                border: 2px solid black;
+                background-color: rgb(163, 120, 208);
+            }
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+            ._157 {
+                height: 100px;
+                width: 100%;
+                border: 2px solid black;
+                background-color: pink;
+            }
+        }
+
+        @media screen and (min-width: 1025px) {
+            ._157 {
+                height: 200px;
+                width: 100%;
+                border: 2px solid black;
+                background-color: rgb(236, 130, 10);
+            }
+
+
+        }
+
+        ._158 {
+            height: 50px;
+            width: 100%;
+            border: 2px solid black;
+
+        }
+
+        @media screen and (max-width:600px) {
+            ._158 {
+                height: 100px;
+                width: 100%;
+                border: 2px solid black;
+
+            }
+
+            ._158 h2 {
+                font-size: 20px;
+            }
+
+            ._158 p {
+                font-size: 14px;
+            }
+        }
+
+        @media screen and (max-width: 1023px) and (min-width: 601px) {
+            ._158 {
+                height: 200px;
+                width: 100%;
+                border: 2px solid black;
+
+            }
+
+            ._158 h2 {
+                font-size: 30px;
+            }
+
+            ._158 p {
+                font-size: 18px;
+            }
+        }
+
+        @media screen and (min-width: 1025px) {
+            ._158 {
+                height: 100px;
+                width: 100%;
+                border: 2px solid black;
+
+            }
+
+            ._158 h2 {
+                font-size: 40px;
+            }
+
+            ._158 p {
+                font-size: 22px;
+            }
+        }
+
+        ._159 {
+            height: 30px;
+            width: 50%;
+            background-color: bisque;
+        }
+
+        @media screen and (max-width:600px) {
+            ._159 {
+                display: flex;
+
+                flex-direction: column;
+                height: 130px;
+                width: 50%;
+                background-color: bisque;
+            }
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+            ._159 {
+                display: flex;
+                flex-wrap: wrap;
+                height: 30px;
+                width: 50%;
+                background-color: bisque;
+            }
+        }
+
+        @media screen and (min-width: 1025px) {
+            ._159 {
+                display: flex;
+                height: 30px;
+                width: 50%;
+                background-color: bisque;
+            }
+        }
+
+        ._160 {
+            height: 350px;
+            width: 100%;
+            border: 2px solid black;
+
+        }
+
+        @media screen and (max-width:600px) {
+            ._160 img {
+                height: 350px;
+                width: 100%;
+                border: 2px solid black;
+
+            }
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+            ._160 img {
+                height: 350px;
+                width: 50%;
+                border: 2px solid black;
+
+            }
+        }
+
+        @media screen and (min-width: 1025px) {
+            ._160 img {
+                height: 350px;
+                width: 25%;
+                border: 2px solid black;
+
+            }
+        }
+
+        ._161 {
+            height: 200px;
+            width: 100%;
+            border: 2px soild black;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 200px;
+
+        }
+
+        ._161-1 {
+            border: 2px solid black;
+            text-align: center;
+            align-content: center;
+            font-size: 32px;
+        }
+
+        @media screen and (max-width:600px) {
+            ._161 {
+                height: 600px;
+                width: 100%;
+                border: 2px soild black;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: (200px, 200px, 200px);
+
+            }
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+            ._161 {
+                height: 400px;
+                width: 100%;
+                border: 2px soild black;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: (200px, 200px);
+
+            }
+        }
+
+        @media screen and (min-width: 1025px) {
+            ._161 {
+                height: 200px;
+                width: 100%;
+                border: 2px soild black;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: (200px);
+
+            }
+        }
+
+        ._162 {
+            height: 50px;
+            width: 100%;
+
+        }
+
+        ._162 button {
+            height: 30px;
+            width: 50px;
+            background-color: bisque;
+            border: 2px solid black;
+        }
+
+        @media screen and (max-width:600px) {
+            ._162 {
+                height: 80px;
+                width: 100%;
+
+            }
+
+            ._162 button {
+                height: 60px;
+                width: 100px;
+                background-color: bisque;
+                border: 2px solid black;
+
+            }
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+            ._162 {
+                height: 60px;
+                width: 100%;
+
+            }
+
+            ._162 button {
+                height: 40px;
+                width: 200px;
+                background-color: bisque;
+                border: 2px solid black;
+
+            }
+        }
+
+        @media screen and (min-width: 1025px) {
+            ._162 {
+                height: 50px;
+                width: 100%;
+
+            }
+
+            ._162 button {
+                height: 30px;
+                width: 100px;
+                background-color: bisque;
+                border: 2px solid black;
+
+            }
+        }
+
+        ._163 {
+            height: 100px;
+            width: 100%;
+            border: 2px solid black;
+            background-color: blanchedalmond;
+
+        }
+
+        @media screen and (max-width:600px) {
+            ._163:hover {
+                height: 100%;
+                width: 25%;
+                background-color: azure;
+            }
+
+        }
+
+        @media screen and (min-width: 601px)and(max-width: 1024px) {
+            ._163 {
+                display: none;
+            }
+
+        }
+
+        @media screen and (min-width: 1025px) {
+            ._163 {
+                display: none;
+            }
+        }
+
+        ._164 {
+            height: 200px;
+            width: 100%;
+            border: 2px solid black;
+            background-color: pink;
+        }
+
+        @media screen and (max-width:600px) and (orientation: portrait) {
+            ._164 {
+                height: 100px;
+                width: 100%;
+                border: 2px solid black;
+                background-color: pink;
+            }
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) {
+            ._164 {
+                height: 100px;
+                width: 100%;
+                border: 2px solid black;
+                background-color: pink;
+            }
+        }
+
+        @media screen and (min-width: 1025px) and (orientation: landscape) {
+            ._164 {
+                height: 200px;
+                width: 100%;
+                border: 2px solid black;
+                background-color: pink;
+            }
+        }
+
+        ._165 {
+            height: 100px;
+            width: 100%;
+            background-color: beige;
+            border: 2px solid black;
+        }
+
+        @media screen and (max-width:600px) {
+            ._165 {
+                height: 200px;
+                width: 100%;
+                background-color: beige;
+                border: 2px solid black;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                text-align: center;
+                justify-content: space-around;
+            }
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+            ._165 {
+                height: 200px;
+                width: 100%;
+                background-color: beige;
+                border: 2px solid black;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                text-align: center;
+                justify-content: space-around;
+            }
+        }
+
+        @media screen and (min-width: 1025px) {
+            ._165 {
+                height: 100px;
+                width: 100%;
+                background-color: beige;
+                border: 2px solid black;
+                display: flex;
+
+                flex-wrap: wrap;
+                text-align: center;
+                justify-content: space-around;
+            }
+        }
+
+        ._166 {
+            height: 75px;
+            width: 75%;
+            background-color: aqua;
+            text-decoration: none;
+            border: 2px solid black;
+        }
+
+
+        @media screen and (min-width: 1025px) {
+            ._166:hover {
+                filter: blur(100px);
+            }
+
+        }
+
+        ._167 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (max-width:600px) {
+
+            ._167 {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+            ._167 {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+        }
+
+        @media screen and (min-width: 1025px) {
+            ._167 {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+        }
+
+        ._168 {
+            height: 150px;
+            width: 100%;
+            border: 2px solid black;
+
+        }
+
+        @media print and (max-width:600px) {
+        ._168{
+            height: 150px;
+            filter: grayscale(100%);
+        }
+        }
+
+        @media print and (min-width: 601px) and (max-width: 1024px) {
+            ._168{
+                height: 80px;
+            filter: grayscale(100%);
+        }
+        }
+
+        @media print and (min-width: 1025px) {
+            ._168{
+            filter: grayscale(100%);
+        }
+        }
+
+        ._169{
+            height: 200px;
+            width: 100%;
+            border: 2px solid black;
+            background-color: pink;
+        }
+
+        @media screen and (max-width:600px) and (orientation: portrait) {
+            ._169 {
+                height: 100px;
+                width: 100%;
+                border: 2px solid black;
+                background-color: blanchedalmond;
+            }
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait) {
+            ._169 {
+                height: 100px;
+                width: 100%;
+                border: 2px solid black;
+                background-color: blanchedalmond;
+            }
+        }
+
+        @media screen and (min-width: 1025px) and (orientation: landscape) {
+            ._169{
+                height: 200px;
+                width: 100%;
+                border: 2px solid black;
+                background-color: blanchedalmond;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>CSS DAY 13 TASKS</h1>
+    </header>
+    <main>
+        <h4> CSS 157: Basic Breakpoints
+            Create a webpage where the background color changes</h4>
+        <div class="_157">
+            <p>157</p>
+        </div>
+        <hr>
+        <h4>CSS 158: Responsive Font Sizes
+            o Adjust the font size of headings and paragraphs based on screen sizes:</h4>
+        <div class="_158">
+            <h2>CAKE</h2>
+            <p>A cake is a sweet treat made from flour, sugar, eggs, and other ingredients that is baked. Cakes can be
+                simple or elaborate, and can be flavored with chocolate, vanilla, or mint. </p>
+        </div>
+        <hr>
+        <h4>CSS 159: Responsive Navigation Bar</h4>
+        <div class="_159">
+
+            <a>Home |</a>
+            <a>Products |</a>
+            <a>Offers |</a>
+            <a>Contact Us</a>
+
+        </div>
+        <hr>
+
+        <h4> CSS 160: Image Resizing</h4>
+        <div class="_160">
+            <img src="./Assets/Images/fae2.jpg" height="300px" width="300px"></img>
+        </div>
+        <hr>
+        <br>
+        <h4> CSS 161: Layout Adjustments</h4>
+        <div class="_161">
+            <div class="_161-1"> item 1</div>
+            <div class="_161-1"> item 2</div>
+            <div class="_161-1"> item 3</div>
+        </div>
+        <hr>
+        <br>
+
+
+        <h4> CSS 162: Responsive Button Sizes </h4>
+        <div class="_162">
+            <button>BUTTON</button>
+        </div>
+        <br>
+        <hr>
+
+        <h4> CSS 163: Show/Hide Elements</h4>
+        <div class="_163">
+            <p>SIDEBAR</p>
+        </div>
+        <hr><br>
+
+        <h4>CSS 164: Orientation-Specific Styles</h4>
+        <div class="_164">
+            <h3>ORIENTATION</h3>
+        </div>
+        <hr>
+        <br>
+
+        <h4>CSS 165: Responsive Footer</h4>
+        <div class="_165">
+            <h4>|CONTACT US|</h4>
+            <h4>|@linkedin|</h4>
+            <h4>|@address|</h4>
+            <h4>|@mailid.com|</h4>
+        </div>
+        <hr>
+        <br>
+        <h4> CSS 166: Hover Effects for Desktop Only</h4>
+        <div class="_166">
+            <p>HOVER EFFECT ON DESKTOP</p>
+        </div>
+        <hr>
+        <br>
+        <h4> CSS 167: Responsive Forms</h4>
+        <h3>Job Application Form</h3><br>
+        <div class="_167">
+            
+                
+                <div> <label for="Name">Name:</label>
+                    <input type="text" id="Name">
+                </div>
+                <div> <label for="em">Email:</label>
+                    <input type="email" id="em">
+                </div>
+                <div> <label for="resume">Upload Resume</label>
+                    <input type="file" id="resume">
+                </div>
+                <div> <label for="se">Salary expectation</label>
+                    <input type="number" id="se">
+                </div>
+           
+        </div>
+        <hr>
+        <br>
+       
+       <h4> CSS 168: Media Query for Print </h4>
+       <div class="_168">
+        <h2>CAKE</h2>
+        <p>A cake is a sweet treat made from flour, sugar, eggs, and other ingredients that is baked. Cakes can be
+            simple or elaborate, and can be flavored with chocolate, vanilla, or mint. </p>
+    </div>
+        <hr>
+        <br>
+       <h4> CSS 169: Advanced Nested Queries </h4>
+       <div class="_169">
+        <h3>ORIENTATION</h3>
+    </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ._area {
+            height: 200px;
+            width: 100%;
+            border: 2px soild black;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 200px;
+
+        }
+
+        ._div {
+            border: 2px solid black;
+            text-align: center;
+            align-content: center;
+            font-size: 32px;
+        }
+
+        @media screen and (max-width:600px) {
+            ._area {
+                height: 600px;
+                width: 100%;
+                border: 2px soild black;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: (200px, 200px, 200px);
+
+            }
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+            ._area {
+                height: 400px;
+                width: 100%;
+                border: 2px soild black;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: (200px, 200px);
+
+            }
+        }
+
+        @media screen and (min-width: 1025px) {
+            ._area {
+                height: 200px;
+                width: 100%;
+                border: 2px soild black;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: (200px);
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <header><h1>PHOTO GALLERY</h1></header>
+    <div class="_area">
+        <div class="_div"> <img src="./Assets/Images/fae3.avif" height="160px"width="50%">
+        <p>FAE</p>
+        </div>
+        <div class="_div"> <img src="./Assets/Images/fae2.jpg" height="160px"width="50%">
+            <p>FAE</p></div>
+        <div class="_div"><img src="./Assets/Images/fae4.webp" height="160px"width="50%">
+            <p>FAE</p></div>
+    </div>
+    <hr>
+</body>
+</html>
