@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Art and Animations</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Parallax Section */
+.parallax {
+    height: 100vh;
+    background: url('/Assets/IMAGES/f6.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.parallax .content {
+    z-index: 10;
+    position: absolute;
+}
+
+.parallax h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.parallax p {
+    font-size: 1.5em;
+}
+
+/* Bouncing Ball Animation */
+.bouncing-ball {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #87CEEB;
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #FF6347;
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+/* Bouncing Ball Animation Keyframes */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-200px);
+    }
+}
+
+/* Rotating Cube Animation */
+.rotating-cube {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+}
+
+.cube {
+    width: 150px;
+    height: 150px;
+    transform-style: preserve-3d;
+    animation: rotateCube 4s infinite linear;
+    position: relative;
+}
+
+.face {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #000;
+}
+
+.front  { transform: translateZ(75px); background-color: #ff0000; }
+.back   { transform: rotateY(180deg) translateZ(75px); background-color: #00ff00; }
+.left   { transform: rotateY(-90deg) translateZ(75px); background-color: #0000ff; }
+.right  { transform: rotateY(90deg) translateZ(75px); background-color: #ffff00; }
+.top    { transform: rotateX(90deg) translateZ(75px); background-color: #ff00ff; }
+.bottom { transform: rotateX(-90deg) translateZ(75px); background-color: #00ffff; }
+
+/* Rotating Cube Animation Keyframes */
+@keyframes rotateCube {
+    0% {
+        transform: rotateX(0) rotateY(0);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+/* CSS-only Illustration (Sun & Trees) */
+.illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #90EE90;
+    padding: 50px 0;
+}
+
+.sun {
+    width: 150px;
+    height: 150px;
+    background-color: #FFD700;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 5px rgba(255, 223, 0, 0.7);
+}
+
+.tree {
+    width: 50px;
+    height: 80px;
+    background-color: #8B4513;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.tree-1 {
+    bottom: 50px;
+    left: 30px;
+}
+
+.tree-2 {
+    bottom: 50px;
+    left: 120px;
+}
+
+.tree-3 {
+    bottom: 50px;
+    left: 210px;
+}
+
+.tree::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: #228B22;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: -25px;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Parallax Section -->
+    <section class="parallax">
+        <div class="content">
+            <h1>CSS Art & Animations</h1>
+            <p>Enjoy the animated objects and CSS-only illustrations!</p>
+        </div>
+    </section>
+
+    <!-- Bouncing Ball Animation -->
+    <section class="bouncing-ball">
+        <div class="ball"></div>
+    </section>
+
+    <!-- Rotating Cube Animation -->
+    <section class="rotating-cube">
+        <div class="cube">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face left"></div>
+            <div class="face right"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+        </div>
+    </section>
+
+    <!-- CSS-only Illustration: Sun & Trees -->
+    <section class="illustration">
+        <div class="sun"></div>
+        <div class="tree tree-1"></div>
+        <div class="tree tree-2"></div>
+        <div class="tree tree-3"></div>
+    </section>
+</body>
+</html>

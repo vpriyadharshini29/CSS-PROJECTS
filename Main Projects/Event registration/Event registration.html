@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('./ASSETS/IMAGES/back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.countdown-timer {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.time-unit {
+    display: inline-block;
+    text-align: center;
+}
+
+.time {
+    font-size: 3em;
+    font-weight: bold;
+    color: #FF6347;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+p {
+    margin-top: 5px;
+    font-size: 1em;
+    color: white;
+}
+
+/* Registration Form Section */
+.registration-form {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.registration-form h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.registration-form form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.registration-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.registration-form button {
+    background-color: #FF6347;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.registration-form button:hover {
+    background-color: #FF4500;
+}
+
+/* Speakers Section */
+.speakers {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.speakers h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.speaker-cards {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.speaker-card {
+    background-color: #fff;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.speaker-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.speaker-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.speaker-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.speaker-card p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .countdown-timer {
+        flex-direction: column;
+    }
+
+    .time-unit {
+        margin-bottom: 15px;
+    }
+
+    .speaker-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .speaker-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Event Registration</h1>
+            <p>Join us for the exciting webinar event and get valuable insights from top speakers!</p>
+            <div class="countdown">
+                <h2>Event starts in:</h2>
+                <div class="countdown-timer">
+                    <div class="time-unit">
+                        <span class="time">10</span>
+                        <p>Days</p>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time">07</span>
+                        <p>Hours</p>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time">40</span>
+                        <p>Minutes</p>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time">24</span>
+                        <p>Seconds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="registration-form">
+        <h2>Register Now</h2>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <!-- Speakers Section -->
+    <section class="speakers">
+        <h2>Meet Our Speakers</h2>
+        <div class="speaker-cards">
+            <div class="speaker-card">
+                <img src="./ASSETS/IMAGES/s1.jpg" alt="Speaker 1">
+                <h3>JOHN SMITH</h3>
+                <p>Expert in Web Development</p>
+            </div>
+            <div class="speaker-card">
+                <img src="./ASSETS/IMAGES/s2.png" alt="Speaker 2">
+                <h3>WILLIAM</h3>
+                <p>Data Scientist and AI Enthusiast</p>
+            </div>
+            <div class="speaker-card">
+                <img src="./ASSETS/IMAGES/s3.jpg" alt="Speaker 3">
+                <h3>CHARLIE</h3>
+                <p>Cybersecurity Specialist</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

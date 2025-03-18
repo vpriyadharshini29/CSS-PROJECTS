@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Learning</title>
+    
+    <style>
+       
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+    background-color: #FF4500;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-button, .learn-more-button {
+    background-color: #FF6347;
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 180px;
+}
+
+.cta-button:hover, .learn-more-button:hover {
+    background-color: #FF4500;
+    transform: translateY(-3px);
+}
+
+/* Learn More Button */
+.learn-more-button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.learn-more-button:hover {
+    background-color: white;
+    color: #FF6347;
+    border-color: #FF6347;
+}
+
+/* Course Details Section */
+.courses {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.courses h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.course-cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.course-card {
+    background-color: #fafafa;
+    padding: 30px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.course-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.course-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* FAQ Section */
+.faq {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: scale(1.05);
+}
+
+.faq-toggle {
+    display: none;
+}
+
+.faq-question {
+    display: block;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: left;
+    width: 100%;
+    border: none;
+}
+
+.faq-question:hover {
+    background-color: #FF6347;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #f1f1f1;
+    font-size: 1em;
+    text-align: left;
+    color: #555;
+}
+
+.faq-toggle:checked + .faq-question + .faq-answer {
+    display: block;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .cta-button, .learn-more-button {
+        font-size: 1em;
+        padding: 12px 30px;
+    }
+
+    .courses h2 {
+        font-size: 2.2em;
+    }
+
+    .course-cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .course-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 3em;
+    }
+
+    .cta-button, .learn-more-button {
+        font-size: 1.1em;
+        padding: 14px 35px;
+    }
+
+    .courses h2 {
+        font-size: 2.3em;
+    }
+
+    .course-cards {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .course-card {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+    .hero h1 {
+        font-size: 3.5em;
+    }
+
+    .cta-button, .learn-more-button {
+        font-size: 1.3em;
+        padding: 16px 40px;
+    }
+
+    .courses h2 {
+        font-size: 2.5em;
+    }
+
+    .course-cards {
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
+
+    .course-card {
+        width: 30%;
+        padding: 30px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Master Web Development</h1>
+            <p class="tagline">Learn the skills to build modern websites and applications with expert-led courses. Start your learning journey today!</p>
+            <div class="cta-container">
+                <a href="#courses" class="cta-button">Start Learning</a>
+                <a href="#details" class="learn-more-button">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Details Section -->
+    <section id="courses" class="courses">
+        <h2>Course Details</h2>
+        <div class="course-cards">
+            <div class="course-card">
+                <h3>HTML & CSS Fundamentals</h3>
+                <p>Learn the basics of web development with HTML and CSS.</p>
+            </div>
+            <div class="course-card">
+                <h3>JavaScript Essentials</h3>
+                <p>Understand JavaScript to create interactive websites.</p>
+            </div>
+            <div class="course-card">
+                <h3>React & Web Development</h3>
+                <p>Master React to build dynamic web applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <input type="checkbox" id="faq1" class="faq-toggle">
+            <label for="faq1" class="faq-question">What is the duration of the course?</label>
+            <div class="faq-answer">
+                <p>The course duration is 12 weeks, with a flexible schedule.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <input type="checkbox" id="faq2" class="faq-toggle">
+            <label for="faq2" class="faq-question">Can I access the course after completion?</label>
+            <div class="faq-answer">
+                <p>Yes, you will have lifetime access to all course materials.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <input type="checkbox" id="faq3" class="faq-toggle">
+            <label for="faq3" class="faq-question">Do I need prior experience?</label>
+            <div class="faq-answer">
+                <p>No prior experience is required. We start from the basics!</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

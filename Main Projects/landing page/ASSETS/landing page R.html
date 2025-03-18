@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            height: 730px;
+            width: 100%;
+            background-image: url(./IMAGES/shoe.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 20px;
+        }
+
+        header h1 {
+            color: white;
+            font-size: 92px;
+            font-style: italic;
+            animation: slideIn 2s ease;
+            margin-bottom: 0.5em;
+        }
+
+        header p {
+            color: white;
+            font-size: 42px;
+            font-style: italic;
+            animation: fadeIn 2s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-300px);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            font-size: 18px;
+            color: white;
+            font-style: italic;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            background: linear-gradient(to right, grey, whitesmoke);
+        }
+
+        .gallery img {
+            border: 3px solid black;
+            width: 100%;
+            height: auto;
+        }
+
+        .contact {
+            padding: 2em;
+            background: linear-gradient(to right, grey, whitesmoke);
+            text-align: center;
+        }
+
+        .contact form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background: whitesmoke;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .contact button:hover {
+            background-color: #444;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 1024px) {
+            header h1 {
+                font-size: 60px;
+            }
+
+            header p {
+                font-size: 30px;
+            }
+
+            nav {
+                padding-bottom: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact form {
+                max-width: 90%;
+                padding: 15px;
+            }
+
+            .contact button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 48px;
+            }
+
+            header p {
+                font-size: 22px;
+            }
+
+            nav {
+                flex-direction: column;
+                padding-bottom: 20px;
+                align-items: center;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .contact form {
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            .contact button {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 32px;
+            }
+
+            header p {
+                font-size: 18px;
+            }
+
+            .contact form {
+                padding: 8px;
+            }
+
+            .contact input,
+            .contact textarea {
+                padding: 8px;
+            }
+
+            .contact button {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Sandler</h1>
+        <p>Step into Uniqueness</p>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery" id="gallery">
+            <h1><i>Gallery:</i></h1>
+
+            <div class="One-row1">
+                <div class="One-row1-col">
+                    <img src="./IMAGES/shoe 1.jpg" alt="Shoe 1">
+                    <p>$154 JANE PLATFORM HEEL</p>
+                </div>
+                <div class="One-row1-col">
+                    <img src="./IMAGES/shoe2.jpg" alt="Shoe 2">
+                    <p>$139 KARIL HEEL</p>
+                </div>
+            </div>
+
+            <div class="One-row2">
+                <div class="One-row2-col">
+                    <img src="./IMAGES/shoe3.jpg" alt="Shoe 3">
+                    <p>$187 MARIE KARL HEEL</p>
+                </div>
+                <div class="One-row2-col">
+                    <img src="./IMAGES/shoe4.jpg" alt="Shoe 4">
+                    <p>$144 HOIT HEEL</p>
+                </div>
+                <div class="One-row2-col">
+                    <img src="./IMAGES/shoe5.jpg" alt="Shoe 5">
+                    <p>$122 UTLE HEEL</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <legend>Get in Touch</legend>
+            <form>
+                <label for="Name">Name:</label>
+                <input type="text" id="Name" name="name" required>
+
+                <label for="Email">Email:</label>
+                <input type="email" id="Email" name="email" required>
+
+                <label for="Message">Message:</label>
+                <textarea id="Message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

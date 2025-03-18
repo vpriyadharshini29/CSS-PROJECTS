@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #00ddff;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8em;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+nav ul {
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+  }
+
+main {
+  padding: 40px 20px;
+}
+
+.menu {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.category {
+  background-color: #ea6464;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category h3 {
+  font-size: 1.8em;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #111010;
+}
+
+.menu-list {
+  list-style-type: none;
+}
+
+.menu-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-list li:hover {
+  background-color: #f0f0f0;
+  transform: translateX(5px);
+}
+
+.item-info {
+  max-width: 70%;
+}
+
+.item-name {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.item-description {
+  font-size: 1em;
+  color: #777;
+  margin-top: 5px;
+}
+
+.price {
+  font-size: 1.4em;
+  color: #28a745;
+  font-weight: bold;
+  align-self: center;
+}
+
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  .menu h2 {
+    font-size: 2em;
+  }
+
+  .category h3 {
+    font-size: 1.5em;
+  }
+
+  .item-name, .price {
+    font-size: 1.1em;
+  }
+
+  .item-description {
+    font-size: 0.95em;
+  }
+
+  .menu-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 0;
+  }
+
+  .price {
+    margin-top: 10px;
+  }
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 1em;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Gourmet Bistro</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/Main Projects/Restaurant menu page/Restaurant.html">Home</a></li>
+        <li><a href="menu page.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="menu">
+      <h2>Our Menu</h2>
+
+      <div class="categories">
+       
+        <div class="category">
+          <h3>Appetizers</h3>
+          <ul class="menu-list">
+            <li>
+              <div class="item-info">
+                <span class="item-name">Bruschetta</span>
+                <p class="item-description">Grilled bread topped with tomatoes, basil, and garlic.</p>
+              </div>
+              <span class="price">$7.99</span>
+            </li>
+            <li>
+              <div class="item-info">
+                <span class="item-name">Mozzarella Sticks</span>
+                <p class="item-description">Crispy golden mozzarella served with marinara sauce.</p>
+              </div>
+              <span class="price">$6.99</span>
+            </li>
+          </ul>
+        </div>
+
+       
+        <div class="category">
+          <h3>Main Courses</h3>
+          <ul class="menu-list">
+            <li>
+              <div class="item-info">
+                <span class="item-name">Spaghetti Carbonara</span>
+                <p class="item-description">Classic Italian pasta with creamy sauce and pancetta.</p>
+              </div>
+              <span class="price">$15.99</span>
+            </li>
+            <li>
+              <div class="item-info">
+                <span class="item-name">Grilled Chicken</span>
+                <p class="item-description">Tender grilled chicken breast served with vegetables.</p>
+              </div>
+              <span class="price">$18.99</span>
+            </li>
+          </ul>
+        </div>
+
+       
+        <div class="category">
+          <h3>Desserts</h3>
+          <ul class="menu-list">
+            <li>
+              <div class="item-info">
+                <span class="item-name">Tiramisu</span>
+                <p class="item-description">Layered coffee-flavored dessert with mascarpone cream.</p>
+              </div>
+              <span class="price">$5.99</span>
+            </li>
+            <li>
+              <div class="item-info">
+                <span class="item-name">Cheesecake</span>
+                <p class="item-description">Rich and creamy cheesecake with a graham cracker crust.</p>
+              </div>
+              <span class="price">$6.49</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Gourmet Bistro. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Agency</title>
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden; 
+    }
+
+  
+    .hero {
+      position: relative;
+      height: 80vh;
+      background:url('./Assets/Images/back.jpg');
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right,pink,white);
+      opacity: 0.6;
+    }
+
+    .hero h1 {
+      color: white;
+      font-size: 48px;
+      z-index: 1;
+      text-align: center;
+      padding: 0 20px;
+      transform: scale(0.8);
+      animation: scaleUp 1s forwards 1s;
+    }
+
+    
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      opacity: 0;
+      animation: fadeInNav 2s forwards 0.5s;
+    }
+
+    nav ul {
+      list-style: none;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    nav ul li a:hover {
+      color: #3498db;
+    }
+
+   
+    .destinations {
+      padding: 50px 20px;
+      text-align: center;
+      background-color: #f4f4f4;
+    }
+
+    .destinations h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      opacity: 0;
+      animation: fadeIn 2s forwards 1s;
+    }
+
+    .destination-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .destination-card {
+      position: relative;
+      width: 30%;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      opacity: 0;
+      animation: fadeIn 2s forwards 1.5s;
+    }
+
+    .destination-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .destination-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .destination-card h3 {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      font-size: 20px;
+    }
+
+    
+    .testimonials {
+      padding: 50px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      opacity: 0;
+      animation: fadeIn 2s forwards 2s;
+    }
+
+    .testimonial-cards {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .testimonial-card {
+      background-color: #f9f9f9;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 30%;
+      text-align: center;
+      transition: transform 0.3s ease;
+      opacity: 0;
+      animation: fadeIn 2s forwards 2.5s;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .testimonial-card p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-card h4 {
+      font-size: 20px;
+      color: #333;
+    }
+
+    .testimonial-card span {
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes scaleUp {
+      from {
+        transform: scale(0.8);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeInNav {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @media (max-width: 768px) {
+    .destination-card,
+    .testimonial-card {
+      width: 100%;
+    }
+  }
+
+   
+   
+
+  </style>
+</head>
+<body>
+
+ 
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="hero" id="home">
+    <h1>Explore the World with Us</h1>
+  </section>
+
+ 
+  <section class="destinations" id="destinations">
+    <h2>Popular Destinations</h2>
+    <div class="destination-container">
+      <div class="destination-card">
+        <img src="./Assets/Images/beach.jpg" alt="Beach">
+        <h3>Beach Paradise</h3>
+      </div>
+      <div class="destination-card">
+        <img src="./Assets/Images/mountain.jpg" alt="Mountains">
+        <h3>Mountain Adventure</h3>
+      </div>
+      <div class="destination-card">
+        <img src="./Assets/Images/urbanescape.jpg" alt="City">
+        <h3>Urban Escape</h3>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="testimonials" id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <p>"The trip was amazing! The beach was beautiful, and the service was excellent."</p>
+        <h4>Jane Doe</h4>
+        <span>New York, USA</span>
+      </div>
+      <div class="testimonial-card">
+        <p>"A fantastic mountain adventure! The guides were knowledgeable, and the scenery was breathtaking."</p>
+        <h4>John Smith</h4>
+        <span>London, UK</span>
+      </div>
+      <div class="testimonial-card">
+        <p>"The city tours were incredible. I loved exploring new places with a local guide."</p>
+        <h4>Alice Johnson</h4>
+        <span>Sydney, Australia</span>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

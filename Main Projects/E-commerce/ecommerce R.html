@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="./Assets/CSS/style.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to left, whitesmoke, rgb(187, 247, 247));
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            background-color: whitesmoke;
+        }
+
+        .products .col {
+            background-color: white;
+            border: 2px solid #f0f0f0;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .products .col:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .products img {
+            width: 100%;
+            height: auto;
+            border: 2px solid #ddd;
+            transition: transform 0.3s;
+        }
+
+        .products img:hover {
+            transform: scale(1.1);
+        }
+
+        p {
+            font-size: 18px;
+            color: rgb(87, 81, 81);
+            margin-top: 10px;
+        }
+
+        .product-det {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+            border: 2px solid #ddd;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-det .details {
+            max-width: 60%;
+        }
+
+        .product-det h2 {
+            font-size: 24px;
+            color: grey;
+            margin-bottom: 10px;
+        }
+
+        .product-det h3 {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        button {
+            height: 40px;
+            width: 100%;
+            background-color: yellow;
+            border: 2px solid black;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: blue;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .products {
+                grid-template-columns: repeat(3, 1fr); /* 3 columns for tablet */
+            }
+
+            .product-det {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .product-det .details {
+                max-width: 100%;
+            }
+
+            button {
+                width: 100%;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .products {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns for small tablets */
+            }
+
+            .product-det {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .product-det .details {
+                max-width: 100%;
+            }
+
+            button {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .products {
+                grid-template-columns: 1fr; /* 1 column for mobile */
+            }
+
+            .product-det {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .product-det .details {
+                max-width: 100%;
+                font-size: 14px;
+            }
+
+            button {
+                width: 100%;
+                font-size: 14px;
+                padding: 15px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            footer {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>EX-SMARTWATCH</h1>
+    </header>
+
+    <!-- Product section -->
+    <section class="products">
+        <div class="col">
+            <img src="./Assets/Images/s1.jpg" alt="Smartwatch 1">
+            <p><del>$299</del> $199</p>
+            <button>ORDER NOW</button>
+            <button>ADD TO CART <i class="fa fa-shopping-cart"></i></button>
+        </div>
+        <div class="col">
+            <img src="./Assets/Images/s2.jpg" alt="Smartwatch 2">
+            <p><del>$1099</del> $799</p>
+            <button>ORDER NOW</button>
+            <button>ADD TO CART <i class="fa fa-shopping-cart"></i></button>
+        </div>
+        <div class="col">
+            <img src="./Assets/Images/s3.jpg" alt="Smartwatch 3">
+            <p><del>$399</del> $199</p>
+            <button>ORDER NOW</button>
+            <button>ADD TO CART <i class="fa fa-shopping-cart"></i></button>
+        </div>
+    </section>
+
+    <!-- Product details section -->
+    <section class="product-det">
+        <div class="details">
+            <h2>PRODUCT DETAILS</h2>
+            <h3>The Ex-Watch features and build quality are much higher than any rival smartwatch in the market. It offers a vast range of customization options, making it truly a winner. The Ex-Watch, with its stainless steel and sapphire crystal combination, is an excellent smartwatch at this price.</h3>
+        </div>
+    </section>
+
+    <footer>
+        <p>@2025 EX SMART WATCH | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>

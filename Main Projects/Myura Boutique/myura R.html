@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myura Boutique</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            height: 550px;
+            width: 100%;
+            background-image: url(./Assets/Images/back.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 92px;
+            font-style: italic;
+            
+            margin-bottom: 0.5em;
+        }
+
+        header p {
+            font-size: 42px;
+            font-style: italic;
+          
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            font-size: 16px;
+            font-style: italic;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        nav button {
+            padding: 15px;
+            background-color: rgba(243, 43, 200, 0.799);
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 0 10px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        nav button:hover {
+            background-color: rgba(243, 43, 200, 1);
+        }
+
+        nav .navname {
+            position: relative;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 200px;
+            background-color: aqua;
+            border: 2px solid black;
+            z-index: 1;
+        }
+
+        .navname:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown a {
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+            color: black;
+        }
+
+        .dropdown a:hover {
+            background-color: blueviolet;
+            color: white;
+        }
+
+        .product {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .images {
+            border: 2px solid black;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .images img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        footer {
+            height: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 1024px) {
+            header h1 {
+                font-size: 60px;
+            }
+
+            header p {
+                font-size: 32px;
+            }
+
+            nav button {
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            .product {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .dropdown a{
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 48px;
+            }
+
+            header p {
+                font-size: 24px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav button {
+                font-size: 14px;
+                padding: 10px;
+                margin: 5px 0;
+            }
+
+            .product {
+                grid-template-columns: 1fr;
+            }
+
+            .dropdown a{
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 36px;
+            }
+
+            header p {
+                font-size: 18px;
+            }
+
+            nav button {
+                font-size: 12px;
+                padding: 8px;
+                width: 80%;
+            }
+
+            .product {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>MYURA</h1>
+        <p>Slay your Style</p>
+        <nav>
+            <button>Home</button>
+
+            <div class="navname">
+                <button>MEN</button>
+                <div class="dropdown">
+                    <a href="#">Casual</a>
+                    <a href="#">Business Casual</a>
+                    <a href="#">Business Professional</a>
+                    <a href="#">Cocktail Attire</a>
+                    <a href="#">Smart Casual</a>
+                </div>
+            </div>
+
+            <div class="navname">
+                <button>WOMEN</button>
+                <div class="dropdown">
+                    <a href="#">Business Casual</a>
+                    <a href="#">Business Professional</a>
+                    <a href="#">Saris Worn</a>
+                    <a href="#">Lehenga</a>
+                    <a href="#">Ghagra Choli</a>
+                </div>
+            </div>
+
+            <div class="navname">
+                <button>KIDS</button>
+                <div class="dropdown">
+                    <a href="#">Dresses</a>
+                    <a href="#">Jumpsuits</a>
+                    <a href="#">Bodysuits</a>
+                    <a href="#">T-shirts</a>
+                    <a href="#">Joggers</a>
+                    <a href="#">Shorts</a>
+                </div>
+            </div>
+
+            <button>Contact</button>
+        </nav>
+    </header>
+
+    <main>
+        <h2>MEN'S WEAR</h2>
+        <section class="product m">
+            <div class="images">
+                <img src="./Assets/Images/m1.jpg" alt="Men's Wear 1" height="260">
+                <h3>$43</h3>
+            </div>
+            <div class="images">
+                <img src="./Assets/Images/m2.jpg" alt="Men's Wear 2" height="260">
+                <h3>$40</h3>
+            </div>
+            <div class="images">
+                <img src="./Assets/Images/m3.jpg" alt="Men's Wear 3" height="260">
+                <h3>$31</h3>
+            </div>
+        </section>
+
+        <h2>WOMEN'S WEAR</h2>
+        <section class="product w">
+            <div class="images">
+                <img src="./Assets/Images/w1.jpg" alt="Women's Wear 1" height="260">
+                <h3>$23</h3>
+            </div>
+            <div class="images">
+                <img src="./Assets/Images/w2.jpg" alt="Women's Wear 2" height="260">
+                <h3>$53</h3>
+            </div>
+            <div class="images">
+                <img src="./Assets/Images/w3.jpg" alt="Women's Wear 3" height="260">
+                <h3>$54</h3>
+            </div>
+        </section>
+
+        <h2>KID'S WEAR</h2>
+        <section class="product k">
+            <div class="images">
+                <img src="./Assets/Images/k1.jpg" alt="Kid's Wear 1" height="260">
+                <h3>$13</h3>
+            </div>
+            <div class="images">
+                <img src="./Assets/Images/k2.jpg" alt="Kid's Wear 2" height="260">
+                <h3>$33</h3>
+            </div>
+            <div class="images">
+                <img src="./Assets/Images/k3.jpg" alt="Kid's Wear 3" height="260">
+                <h3>$26</h3>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>@2025 MYURA BOUTIQUE | ALL RIGHTS RESERVED</p>
+    </footer>
+</body>
+
+</html>

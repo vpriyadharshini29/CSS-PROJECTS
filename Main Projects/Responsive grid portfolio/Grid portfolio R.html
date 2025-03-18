@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+   
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0c1;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background-image: url('./Assets/Images/back.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+header .subheading {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+
+.about-me {
+  background-color: #242222;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.about-me h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-me p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+
+.skills {
+  background-color: #f9f9f9a9;
+  padding: 40px 20px;
+}
+
+.skills h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.skills ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.projects {
+  padding: 40px 20px;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.project-item {
+  position: relative;
+  background-color: #ffffffa2;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ text-align: center;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-content {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.project-item:hover .project-content {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.project-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-content p {
+  font-size: 1.1rem;
+}
+
+
+.contact {
+  background-color: #fff;
+  padding: 40px 20px;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact label {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact button {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: #555;
+}
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .skills ul {
+    padding-left: 20px;
+  }
+
+  .contact button {
+    font-size: 1rem;
+  }
+
+  .projects h2,
+  .about-me h2,
+  .skills h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-me p,
+  .skills li,
+  .project-content h3 {
+    font-size: 1rem;
+  }
+
+  .projects {
+    padding: 20px;
+  }
+
+  .contact form {
+    padding: 10px;
+  }
+
+  .contact input,
+  .contact textarea {
+    font-size: 0.9rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  
+  <header>
+    <div class="container">
+      <h1>Charlotte</h1>
+      <p class="subheading">Web Developer | Designer</p>
+    </div>
+  </header>
+
+  
+  <section class="about-me" id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hello! I'm Charlotte., a passionate web developer with a love for clean design and intuitive user experiences. I specialize in front-end development using modern web technologies.</p>
+    </div>
+  </section>
+
+  
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML5 & CSS3</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>UI/UX Design</li>
+      </ul>
+    </div>
+  </section>
+
+  
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-item" id="project1"><h3>Personal Portfolio Website</h3>
+        <div class="project-content">
+          <h3>Personal Portfolio Website:</h3>
+          <p>Details: Showcase your skills and projects using a clean, modern design. Include a resume, contact information, and links to your work. 
+          <br>  Focus: User experience, visual appeal, and showcasing your best work. </p>
+        </div>
+      </div>
+      <div class="project-item" id="project2"><h3>Blogging Platform</h3>
+        <div class="project-content">
+          <h3>Blogging Platform:</h3>
+          <p>Details: Create a simple or complex blog with features like user accounts, commenting, and categories. <br>
+            Focus: Content management, user interface, and a good reading experience. </p>
+        </div>
+      </div>
+      <div class="project-item" id="project3"><h3>Interactive Quiz Website:</h3>
+        <div class="project-content">
+          <h3>Interactive Quiz Website:</h3>
+          <p>Details: Design an engaging quiz with questions, answers, and a scoring system. 
+          <br>  Focus: User interaction, fun design, and a clear user flow. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form action="#" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Charlotte. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
