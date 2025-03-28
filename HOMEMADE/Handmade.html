@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orders</title>
+    <title>Purely Handmade</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet">
-
     <style>
         * {
             margin: 0;
@@ -19,24 +18,26 @@
             box-sizing: border-box;
             font-family: "Playfair Display", serif;
             font-optical-sizing: auto;
-            font-size: 20px;
+
             font-style: italic;
         }
 
         body {
 
-            background-color: rgb(251, 242, 239);
+            background-color: #f8fdf2;
+        }
 
-
-            height: 100vh;
+        img {
+            object-fit: cover;
         }
 
         a {
             text-decoration: none;
         }
 
+        /* Header Top */
         .header-top {
-            background-color: rgb(251, 242, 239);
+            background-color: #f8fdf2;
             border-bottom: 1px solid #8b0000;
             text-align: center;
             padding: 5px 0;
@@ -56,16 +57,16 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px 30px;
-            background-color: rgb(251, 242, 239);
+            background-color: #f8fdf2;
         }
 
         .header h1 {
             font-family: "Moon Dance", cursive;
             font-weight: 400;
             font-style: italic;
-            font-variation-settings:
-                "wdth" 100;
-            color: #8b0000;
+            /* font-variation-settings:
+    "wdth" 100; */
+            color: #004d00;
             font-size: 52px;
             margin-left: 560px;
             text-align: center;
@@ -115,19 +116,19 @@
         .search-bar {
             width: 700px;
             padding: 10px;
-            border: 2px solid #8b0000;
+            border: 2px solid #004d00;
             border-radius: 5px 0 0 5px;
             font-size: 16px;
-            color: #8b0000;
+            color: #004d00;
             outline: none;
         }
 
         .search-bar::placeholder {
-            color: #8b0000;
+            color: #004d00;
         }
 
         .search-btn {
-            background-color: #8b0000;
+            background-color: #004d00;
             border: none;
             color: white;
             padding: 10px 15px;
@@ -150,7 +151,7 @@
         .nav {
             display: flex;
             /* justify-content: center; */
-            background-color: rgb(251, 242, 239);
+            background-color: #f8fdf2;
             border-top: 1px solid #e6e6e6;
             padding: 10px 0;
         }
@@ -158,12 +159,12 @@
         .nav-item {
             margin: 0 20px;
             font-weight: bold;
-            color: #4d2900;
+            color: #004d00;
             text-transform: uppercase;
             font-size: 16px;
             text-decoration: none;
             letter-spacing: 1px;
-            background-color: rgb(251, 242, 239);
+            background-color: #f8fdf2;
         }
 
         .nav-item:hover {
@@ -171,142 +172,180 @@
             background-color: #f8fdf2;
         }
 
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            background-color: rgb(251, 242, 239);
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+        .Home-image {
+            position: relative;
         }
 
-        .container .header {
+        .Home-image h1 {
+            position: absolute;
+            font-size: 45px;
+            top: 25%;
+            left: 45%;
+            right: 10%;
+        }
+
+        .Best-sellers {
+            height: 450px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
+            color: black;
+
         }
 
-        .container .header h1 {
-            font-family: 'Brush Script MT', cursive;
-            font-size: 2.5em;
-            color: #802200;
-            margin: 0;
+        .Best-sellers a {
+            color: #000;
         }
 
-        .container .header a {
-            text-decoration: none;
-            color: #001aff69;
-            font-size: 0.9em;
+        .sellers img {
+            border: 2px solid black;
+            border-radius: 50%;
+
         }
 
-        .order-item {
-            background-color: white;
-            /* Light bluish background */
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
+        .green-part {
+            height: 230px;
+            color: white;
+            background-color: #004d00;
+            text-align: center;
+        }
+
+        .green-part p {
+            color: white;
+            font-size: 40px;
+            padding-left: 20%;
+            padding-right: 20%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+        }
+
+        .explore {
+            height: 900px;
+        }
+
+        .explore-products {
+            display: grid;
+            width: 60%;
+            grid-template-columns: (1fr);
+            grid-template-rows: (400px, 400px);
+        }
+
+        .One-row1 {
+            display: grid;
+            grid-template-columns: repeat(2, 500px);
+            grid-template-rows: 400px;
+
+            padding-left: 200px;
+        }
+
+        .One-row2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 400px;
+
+        }
+
+        .gallery img {
+            border: 3px solid black;
+            width: 100%;
+            height: 400px;
+        }
+
+        .green-part-2 {
+            height: 200px;
+            width: 100%;
+
+
+        }
+
+        .green-part-2 img {
+            padding-top: 30px;
+            height: 200px;
+            width: 100%;
+        }
+
+        .made-by-hand {
+            height: 300px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1000px 300px;
+            grid-template-rows: 280px;
+            gap: 10px;
+        }
+
+        .description {
+            border: 2px solid black;
+            align-content: center;
+            justify-content: center;
+            color: #8B0000;
+            height: 280px;
+            width: 1000px;
+            margin-left: 50px;
+            padding-left: 230px;
+            padding-right: 230px;
+        }
+
+        .made-by-hand .image {
             border: 2px solid black;
         }
 
-        .order-item img {
-            width: 80px;
-            margin-right: 15px;
+        .image img {
+            height: 280px;
+            width: 300px;
         }
 
-        .order-details {
-            flex-grow: 1;
+        .recommended-products {
+            height: 350px;
+            width: 100%;
         }
 
-        .order-details p {
-            margin: 5px 0;
-            font-size: 0.9em;
+        .scroll-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
         }
 
-        .order-details .product-name {
-            font-weight: bold;
+        .scroll-content {
+            display: inline-block;
+            white-space: 30px;
+            animation: scroll 12s linear infinite;
         }
 
-        .order-details .price {
-            color: #f88400;
-            font-family: 'Times New Roman', serif;
+        .scroll-content img {
+            width: 400px;
+            height: 300px;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
 
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
 
-        .order-status {
-            display: flex;
-            align-items: center;
+            100% {
+                transform: translateX(-50%);
+            }
         }
 
-        .order-status p {
-            margin: 5px 15px;
-            font-size: 0.9em;
-        }
-
-        .order-status .status {
-            font-weight: bold;
-            color: #f88400;
-        }
-
-        .order-status .track-link {
-            text-decoration: none;
-            color: #007bff;
-            font-size: 0.9em;
-            margin-left: auto;
-        }
-
-        
-        .order-item {
-            align-items: flex-start;
-          
-        }
-
-        .order-status {
-            display: flex;
-           
-            align-items: flex-start;
-           
-            column-gap: 50px;
-        }
-
-        .order-status p {
-            margin: 2px 15px;
-         
-        }
-
-        .order-status .track-link {
-            margin-top: 5px;
-            
-        }
-
-        .order-details {
-            width: 200px;
-          
-        }
-
-        .order-status {
-            width: 350px;
-           
-        }
 
         .footer {
             background-color: #F2C9B8;
-           
+            /* Light peach background */
             padding: 20px 0;
             color: #006400;
-           
+            /* Dark green text */
             display: flex;
             justify-content: space-around;
             align-items: flex-start;
             border-top: 1px solid black;
-           
+            /* Black border on top */
         }
 
         .footer a {
             color: #006400;
-           
+            /* Dark green links */
             text-decoration: none;
         }
 
@@ -323,7 +362,6 @@
             font-size: 1.2em;
             margin-bottom: 10px;
             color: #8B0000;
-            /* Dark red for headings */
         }
 
         .footer-section ul {
@@ -343,37 +381,36 @@
         }
 
         .footer-social img {
-            width: 30px;
-            height: 30px;
+            width: 50px;
+            height: 50px;
             margin-right: 10px;
         }
 
         .footer-logo {
-            font-family: 'Brush Script MT', cursive;
-            
+
             font-size: 2em;
             color: #006400;
-           
         }
 
-       
+
         .social-icon {
             width: 10px;
             height: 30px;
             background-color: white;
-           
             border-radius: 50%;
             margin-right: 10px;
         }
 
-      
+
         .footer-logo {
-            font-family: 'Brush Script MT', cursive;
+
             font-size: 2em;
             color: #006400;
         }
 
         @media screen and (max-width:600px) {
+
+
             .header-top {
                 display: flex;
                 flex-direction: column;
@@ -439,7 +476,7 @@
             }
 
             .search-bar {
-                width: 250px;
+                width: 280px;
                 padding: 10px;
 
             }
@@ -457,101 +494,135 @@
 
             }
 
-            .container {
+
+
+
+            .Home-image img {
                 width: 100%;
-                margin: 0px;
+                height: 300px;
+            }
+
+            .Home-image h1 {
+
+                font-size: 25px;
 
             }
 
-            .container .header {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 20px;
-            }
-
-
-
-
-
-            .order-item {
-
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                border: 2px solid black;
-            }
-
-            .order-item img {
+            .Best-sellers {
+                height: 900px;
                 width: 100%;
-                margin-right: 0px;
-            }
-
-            .order-details {
-                flex-grow: 1;
-            }
-
-            .order-details p {
-                margin: 0px 0;
-
-            }
-
-
-
-
-
-
-            .order-status {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-            }
 
-            .order-status p {
-                margin: 0px 3px;
 
             }
 
+            .sellers img {
+
+                height: 250px;
+
+            }
+
+            .green-part {
+                height: 250px;
+
+            }
+
+            .green-part p {
+
+                font-size: 20px;
+
+            }
+
+            .explore {
+                height: 1700px;
+                width: 100%;
+            }
+
+            .explore-products {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .One-row1 {
+                display: flex;
+                flex-direction: column;
+                padding-left: 0;
+
+            }
+
+            .One-row2 {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .gallery img {
+
+                width: 100%;
+                height: 300px;
+            }
+
+            .green-part-2 {
+                height: 200px;
+                width: 100%;
 
 
-            .order-status .track-link {
+            }
 
+            .green-part-2 img {
+                padding-top: 30px;
+                height: 150px;
+                width: 100%;
+            }
+
+            .made-by-hand {
+                height: 800px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .description {
+
+                height: 380px;
+                width: 100%;
                 margin-left: 0px;
+                padding-left: 0px;
+                padding-right: 0px;
+
+
             }
 
-
-            .order-item {
-                align-items: flex-start;
-                
-            }
-
-            .order-status {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                column-gap: 50px;
-            }
-
-            .order-status p {
-                margin: 0px 3px;
-               
-            }
-
-            .order-status .track-link {
-                margin-top: 5px;
-               
-            }
-
-            .order-details {
+            .image img {
+                height: 280px;
                 width: 100%;
-                
             }
 
-            .order-status {
+            .recommended-products {
+                height: 350px;
                 width: 100%;
-               
             }
+
+            .scroll-container {
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+
+            }
+
+
+
+            .scroll-content img {
+                width: 200px;
+                height: 200px;
+
+            }
+
+
+
 
             .footer {
 
@@ -581,6 +652,7 @@
         }
 
         @media screen and (min-width: 601px) and (max-width: 1024px) {
+           
             .header-top {
                 display: flex;
                 flex-direction: column;
@@ -664,101 +736,135 @@
 
             }
 
-            .container {
+
+
+
+            .Home-image img {
                 width: 100%;
-                margin: 0px;
+                height: 300px;
+            }
+
+            .Home-image h1 {
+
+                font-size: 25px;
 
             }
 
-            .container .header {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 20px;
-            }
-
-
-
-
-
-            .order-item {
-
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                border: 2px solid black;
-            }
-
-            .order-item img {
+            .Best-sellers {
+                height: 900px;
                 width: 100%;
-                margin-right: 0px;
-            }
-
-            .order-details {
-                flex-grow: 1;
-            }
-
-            .order-details p {
-                margin: 0px 0;
-
-            }
-
-
-
-
-
-
-            .order-status {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-            }
 
-            .order-status p {
-                margin: 0px 3px;
 
             }
 
+            .sellers img {
+
+                height: 250px;
+
+            }
+
+            .green-part {
+                height: 250px;
+
+            }
+
+            .green-part p {
+
+                font-size: 20px;
+
+            }
+
+            .explore {
+                height: 1700px;
+                width: 100%;
+            }
+
+            .explore-products {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .One-row1 {
+                display: flex;
+                flex-direction: column;
+                padding-left: 0;
+
+            }
+
+            .One-row2 {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .gallery img {
+
+                width: 100%;
+                height: 300px;
+            }
+
+            .green-part-2 {
+                height: 200px;
+                width: 100%;
 
 
-            .order-status .track-link {
+            }
 
+            .green-part-2 img {
+                padding-top: 30px;
+                height: 150px;
+                width: 100%;
+            }
+
+            .made-by-hand {
+                height: 800px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .description {
+
+                height: 380px;
+                width: 100%;
                 margin-left: 0px;
+                padding-left: 0px;
+                padding-right: 0px;
+
+
             }
 
-
-            .order-item {
-                align-items: flex-start;
-                /* Align items to the top */
-            }
-
-            .order-status {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                column-gap: 50px;
-            }
-
-            .order-status p {
-                margin: 0px 3px;
-              
-            }
-
-            .order-status .track-link {
-                margin-top: 5px;
-                
-            }
-
-            .order-details {
+            .image img {
+                height: 280px;
                 width: 100%;
-               
             }
 
-            .order-status {
+            .recommended-products {
+                height: 350px;
                 width: 100%;
-               
             }
+
+            .scroll-container {
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+
+            }
+
+
+
+            .scroll-content img {
+                width: 200px;
+                height: 200px;
+
+            }
+
+
+
 
             .footer {
 
@@ -783,27 +889,35 @@
                 align-items: center;
             }
 
+
+
         }
+
+        
     </style>
 </head>
 
 <body>
+
     <!-- Header Top -->
     <div class="header-top">
         UP TO 40 % OFF | <a href="#">SHOP NOW</a>
         <div class="icons">
-            <a href="track orders.html" class="icon-item"><i class="fa fa-gift" style="font-size:24px"></i> Orders</a>
-            <a href="Login page.html" class="icon-item"> &#x1F464; Login</a>
-            <a href="order page.html" class="icon-item"><i class="fa fa-shopping-cart"></i> Cart</a>
+            <a href="./Pages/track orders.html" class="icon-item"><i class="fa fa-gift"
+                    style="font-size:24px"></i> Orders</a>
+            <a href="./Pages/Login page.html" class="icon-item"> &#x1F464; Login</a>
+            <a href="./Pages/order page.html" class="icon-item"><i class="fa fa-shopping-cart"></i> Cart</a>
         </div>
-       
+
     </div>
-  
+
     <!-- Main Header -->
     <div class="header">
-       <a href="/HOMEMADE/Handmade.html"> <h1>Purely Handmade</h1></a>
-      
-      </div>
+        <a href="Handmade.html">
+            <h1>Purely Handmade</h1>
+        </a>
+
+    </div>
 
     <div class="navbar"> <!-- Search Bar -->
         <div class="search-container">
@@ -813,52 +927,113 @@
 
         <!-- Nav Bar -->
         <div class="nav">
-            <a href="soap page.html" class="nav-item">Soap</a>
-            <a href=".oil page.html" class="nav-item">Oil</a>
-            <a href=".Shampoo page.html" class="nav-item">Shampoo</a>
-            <a href=".Candle page.html" class="nav-item">Candle</a>
-            <a href=".Pickle Page.html" class="nav-item">Pickle</a>
+            <a href="./Pages/soap page.html" class="nav-item">Soap</a>
+            <a href="./Pages/oil page.html" class="nav-item">Oil</a>
+            <a href="./Pages/Shampoo page.html" class="nav-item">Shampoo</a>
+            <a href="./Pages/Candle page.html" class="nav-item">Candle</a>
+            <a href="./Pages/Pickle Page.html" class="nav-item">Pickle</a>
         </div>
-    
     </div>
-    <div class="container">
-        <div class="header">
-            <h1>ORDERS</h1>
-            <a href="#">Continue Shopping</a>
+    <!-- Background -->
+    <div class="Home-image">
+        <h1>BRINGING NATURE'S GOODNESS TO HOME</h1>
+        <img src="./Images/Back.jpg" height="600px" width="100%"></img>
+
+    </div>
+    <h2>BEST SELLERS:</h2>
+    <div class="Best-sellers">
+
+        <a href="./Pages/product page.html">
+            <div class="sellers">
+                <img src="./Images/Turneric.png"></img>
+                <h3>Turmeric and Honey glowup</h3>
+        </a>
+    </div>
+    <div class="sellers">
+        <img src="./Images/Lavender.png"></img>
+        <h3>Lavender and vanilla scented candle</h3>
+    </div>
+    <div class="sellers">
+        <img src="./Images/coconut.png"></img>
+        <h3>Cold-pressed Coconut oil</h3>
+    </div>
+
+
+    </div>
+    <div class="green-part">
+        <p>Our Products are safe,Minimal and easy on Planet.<br>Say Goddbye to chemicals and Hello to Nature!Crafted
+            with Love ,inspired by Nature</p>
+    </div>
+    <div class="explore">
+        <h2>EXPLORE OUR PRODUCTS</h2>
+        <section class="gallery" id="gallery">
+            <h1><i>Gallery:</i></h1>
+
+            <div class="One-row1">
+                <div class="One-row1-col">
+                    <img src="./Images/one.png" alt="Shoe 1">
+
+                </div>
+                <div class="One-row1-col">
+                    <img src="./Images/two.png" alt="Shoe 2">
+
+                </div>
+            </div>
+
+            <div class="One-row2">
+                <div class="One-row2-col">
+                    <img src="./Images/three.png" alt="Shoe 3">
+
+                </div>
+                <div class="One-row2-col">
+                    <img src="./Images/scroll10.jpg" height="150px" alt="Shoe 4">
+
+                </div>
+                <div class="One-row2-col">
+                    <img src="./Images/five.png" height="200px" alt="Shoe 5">
+
+                </div>
+            </div>
+        </section>
+        <br><br>
+    </div>
+    <div class="green-part-2">
+        <img src="./Images/Green bar.png"></img>
+
+    </div>
+    <div class="made-by-hand">
+        <div class="description">
+            <h2> MADE BY HAND</h2>
+            <h3>
+                All products are produced in small batches to ensure quality and freshness.Handmade with ingredients you
+                and your skin will love
+            </h3>
         </div>
 
-        <div class="order-item">
-            <img src="./images/soap/orange.png" alt="Orange Soap">
-            <div class="order-details">
-                <p class="product-name">Natural Soap: Orange Extracted</p>
-                <p class="price">Rs. 800</p>
-            </div>
-            <div class="order-status">
-                <h3>
-                    <p>Status: </p>
-                    <span class="status">In-Transit</span>
-                </h3>
-                <p>Delivery Expected by: 24 March 2025</p>
-                <h2> <a href="shipping page .html" class="track-link">Track</a></h2>
-
-            </div>
+        <div class="image">
+            <img src="./Images/made by hand.png" height="280px" width="100%"></img>
         </div>
-
-        <div class="order-item">
-            <img src="./images/soap/badam.png" alt="Badam Soap">
-            <div class="order-details">
-                <p class="product-name">Badam Infused Soap</p>
-                <h4>
-                    <p class="price">Rs. 800</p>
-                </h4>
-            </div>
-            <div class="order-status">
-                <h3>
-                    <p>Status: </p>
-                    <span class="status">Delivered</span>
-                </h3>
-                <p>Delivered On: 14 Febraury 2025</p>
-                <a href="payment successful page.html" class="track-link">Payment</a>
+    </div>
+    <br><br>
+    <div class="recommended-products">
+        <h1>Recommended products</h1>
+        <div class="scroll-container">
+            <div class="scroll-content">
+                <img src="./Images/scroll1.jpg" alt="Image 1">
+                <img src="./Images/scroll2.jpg" alt="Image 2">
+                <img src="./Images/scroll3.jpg" alt="Image 3">
+                <img src="./Images/scroll4.jpg" alt="Image 4">
+                <img src="./Images/scroll5.jpg" alt="Image 5">
+                <img src="./Images/scroll6.jpg" alt="Image 1">
+                <img src="./Images/scroll7.jpg" alt="Image 2">
+                <img src="./Images/scroll8.jpg" alt="Image 3">
+                <img src="./Images/scroll9.jpg" alt="Image 4">
+                <img src="./Images/scroll10.jpg" alt="Image 5">
+                <img src="./Images/scroll11.jpg" alt="Image 3">
+                <img src="./Images/scroll12.jpg" alt="Image 4">
+                <img src="./Images/scroll13.jpg" alt="Image 5">
+                <img src="./Images/scroll14.jpg" alt="Image 4">
+                <img src="./Images/scroll15.jpg" alt="Image 5">
             </div>
         </div>
     </div>
@@ -866,11 +1041,11 @@
         <div class="footer-social">
             <div class="footer-logo">Purely Handmade</div><br>
             <div class="social-icons">
-                <img src="./images/fb (1).png" alt="Facebook" class="social-icon">
-                <img src="./images/insta.png" alt="Instagram" class="social-icon">
-                <img src="./images/whatsp.png" alt="Chat" class="social-icon">
-                <img src="./images/twitter.png" alt="Twitter" class="social-icon">
-                <img src="./images/linkin.png" alt="LinkedIn" class="social-icon">
+                <img src="./Images/fb (1).png" alt="Facebook" class="social-icon">
+                <img src="./Images/insta.png" alt="Instagram" class="social-icon">
+                <img src="./Images/whatsp.png" alt="Chat" class="social-icon">
+                <img src="./Images/twitter.png" alt="Twitter" class="social-icon">
+                <img src="./Images/linkin.png" alt="LinkedIn" class="social-icon">
             </div>
         </div>
 
