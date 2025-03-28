@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet"> <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+
+  font-style: italic;
+        }
+            body {
+           
+            background-color: #f8fdf2;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        /* Header Top */
+        .header-top {
+            background-color: #f8fdf2;
+            border-bottom: 1px solid #8b0000;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 12px;
+            color: #8b0000;
+        }
+
+        .header-top a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Main Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            background-color: #f8fdf2;
+        }
+
+        .header h1 {
+            font-family: "Moon Dance", cursive;
+  font-weight: 400;
+  font-style: italic;
+  font-variation-settings:
+    "wdth" 100;
+            color: #004d00;
+            font-size: 52px;
+            margin-left: 560px;
+            text-align: center;
+        }
+
+        /* Icons and Links */
+        .icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            float: right;
+        }
+
+        .icon-item {
+            display: flex;
+            align-items: center;
+            color: #004d00;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .icon-item i {
+            font-size: 20px;
+            margin-right: 8px;
+            color: #8b0000;
+        }
+
+        .icon-item:hover {
+            color: #8b0000;
+        }
+        .payment{
+            height: 60%;
+            width: 100%;
+            position: relative;
+            align-content: center;
+            justify-content: center;
+        }
+        img{
+            object-fit: contain;
+            height: 60%;
+            width: 100%;
+
+        }
+        .texts{
+            position: absolute;
+            top:90%;
+            left:10%;
+           text-align: center;
+            font-size: large;
+        }
+        button{
+            padding: 10px;
+            background-color: orangered;
+            font-size: 20px;
+            color: wheat;
+            margin-bottom: 10px;
+        }
+        @media screen and (max-width:600px){
+            .header-top {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 100px;
+
+
+            }
+
+            .header h1 {
+
+
+                font-size: 32px;
+                margin-left: 50px;
+
+                text-align: center;
+            }
+
+
+            .icons {
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+            .icon-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .icon-item i {
+                font-size: 20px;
+                margin-right: 8px;
+
+            }
+            .payment{
+            height: 60%;
+            width: 100%;
+            position: relative;
+            align-content: center;
+            justify-content: center;
+        }
+        img{
+            object-fit: contain;
+            height: 60%;
+            width: 100%;
+
+        }
+        .texts{
+            position: absolute;
+            top:90%;
+            left:10%;
+           text-align: center;
+            font-size: 10px;
+        }
+        button{
+            padding: 10px;
+            background-color: orangered;
+            font-size: 15px;
+            color: wheat;
+            margin-bottom: 10px;
+        }
+
+}
+@media screen and (min-width: 601px) and (max-width: 1024px){
+    
+}
+
+    </style>
+</head>
+<body>
+    
+    <!-- Header Top -->
+    <div class="header-top">
+        UP TO 40 % OFF | <a href="#">SHOP NOW</a>
+        <div class="icons">
+            <a href="/HOMEMADE/Pages/track orders.html" class="icon-item"><i class="fa fa-gift" style="font-size:24px"></i> Orders</a>
+            <a href="/HOMEMADE/Pages/Login page.html" class="icon-item"> &#x1F464; Login</a>
+            <a href="/HOMEMADE/Pages/order page.html" class="icon-item"><i class="fa fa-shopping-cart"></i> Cart</a>
+        </div>
+       
+    </div>
+
+    <!-- Main Header -->
+    <div class="header">
+       <a href="/HOMEMADE/Pages/Handmade.html"> <h1>Purely Handmade</h1></a>
+      
+    </div>
+    <div class="payment">
+        <img src="/HOMEMADE/Images/payment success.webp"></img><br><br>
+      <div class="texts">  <h2>Your Order has been confirmed by the vendor.<br>Thankyou for the opportunity to serve you</h2>
+
+        <button>Download invoice</button>
+    </div>
+    </div>
+</body>
+</html>

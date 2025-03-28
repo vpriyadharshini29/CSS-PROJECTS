@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency Booking Form</title>
+</head>
+<body>
+
+    <h1>Travel Agency Booking Form</h1>
+
+   
+    <form action="#" method="post">
+
+       
+        <fieldset>
+            <legend>Personal Information</legend>
+
+           
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Your full name" required><br><br>
+
+            
+            <label for="destination">Destination:</label><br>
+            <input type="text" id="destination" name="destination" placeholder="Where are you traveling to?" required><br><br>
+
+           
+            <label for="travel-date">Travel Date:</label><br>
+            <input type="date" id="travel-date" name="travel-date" required><br><br>
+
+        </fieldset>
+
+       
+        <fieldset>
+            <legend>Select a Travel Package</legend>
+
+           
+            <label for="package">Travel Package:</label><br>
+            <select id="package" name="package" required>
+                <option value="" disabled selected>Select a package</option>
+                <option value="basic">Basic Package - $500</option>
+                <option value="standard">Standard Package - $1000</option>
+                <option value="premium">Premium Package - $1500</option>
+                <option value="luxury">Luxury Package - $2500</option>
+            </select><br><br>
+
+        </fieldset>
+
+       
+        <input type="submit" value="Book Now">
+
+    </form>
+
+</body>
+</html>

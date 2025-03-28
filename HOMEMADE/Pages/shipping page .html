@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping & Delivery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet">
+     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+
+  font-style: italic;
+        }
+            body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background-color: #f8fdf2;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        /* Header Top */
+        .header-top {
+            background-color: #f8fdf2;
+            border-bottom: 1px solid #8b0000;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 12px;
+            color: #8b0000;
+        }
+
+        .header-top a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Main Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            background-color: #f8fdf2;
+        }
+
+        .header h1 {
+            font-family: "Moon Dance", cursive;
+  font-weight: 400;
+  font-style: italic;
+  font-variation-settings:
+    "wdth" 100;
+            color: #004d00;
+            font-size: 52px;
+            margin-left: 560px;
+            text-align: center;
+        }
+
+        /* Icons and Links */
+        .icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            float: right;
+        }
+
+        .icon-item {
+            display: flex;
+            align-items: center;
+            color: #004d00;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .icon-item i {
+            font-size: 20px;
+            margin-right: 8px;
+            color: #8b0000;
+        }
+
+        .icon-item:hover {
+            color: #8b0000;
+        }
+
+/* Container for two-column layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    font-size: 16px;
+}
+
+/* Left Side: Shipping and Delivery Form Section */
+.form-section {
+    width: 45%;
+}
+
+h2 {
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+/* Form Label and Inputs */
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 2px solid #FF7A00;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+/* City, State, Country, Pincode Fields in two columns */
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.column {
+    width: 48%;
+}
+
+/* Checkbox */
+.checkbox {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.checkbox label {
+    font-size: 16px;
+}
+
+/* Right Side: Order Summary Section */
+.order-summary {
+    width: 45%;
+    background-color: #FFE6E0;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+/* Order Summary Price Styling */
+.order-summary p {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.price {
+    color: #2FBAB3;
+    font-weight: bold;
+}
+
+/* Discount Section */
+.discount-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.discount-section input {
+    width: 70%;
+    padding: 12px;
+    border: 2px solid #CCC;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.discount-section button {
+    padding: 10px 15px;
+    background-color: #CCC;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Order Summary Breakdown */
+.summary {
+    margin-top: 20px;
+}
+
+.summary hr {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #000;
+}
+
+.summary p {
+    font-size: 20px;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 22px;
+    color: #000;
+}
+
+/* Place Order Button */
+.order-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #FF7A00;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+/* Adding shadow effect */
+.order-summary, input[type="text"], input[type="email"], .discount-section input, .order-btn {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.discount-summary{
+    border: 2px solid black;
+    background-color: white;
+    padding: 20px 20px 20px 20px;
+}
+.footer {
+  background-color: #F2C9B8; /* Light peach background */
+  padding: 20px 0;
+  color: #006400; /* Dark green text */
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  border-top: 1px solid black; /* Black border on top */
+}
+
+.footer a {
+  color: #006400; /* Dark green links */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-section {
+  text-align: left;
+}
+
+.footer-section h3 {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #8B0000; /* Dark red for headings */
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 5px;
+}
+
+.footer-social {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.footer-logo {
+  font-family: 'Brush Script MT', cursive; /* Example font, adjust as needed */
+  font-size: 2em;
+  color: #006400; /* Dark green logo text */
+}
+
+/* Social media icons (replace with your actual icons) */
+.social-icon {
+  width: 10px;
+  height: 30px;
+  background-color: white; /* White background for icons */
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Example styling for the logo */
+.footer-logo {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2em;
+  color: #006400;
+}
+@media screen and (max-width:600px){
+    .header-top {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 100px;
+
+
+            }
+
+            .header h1 {
+
+
+                font-size: 32px;
+                margin-left: 50px;
+
+                text-align: center;
+            }
+
+
+            .icons {
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+            .icon-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .icon-item i {
+                font-size: 20px;
+                margin-right: 8px;
+
+            }
+            .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 40px;
+    font-size: 16px;
+}
+
+
+.form-section {
+    width: 95%;
+}
+
+
+
+
+label {
+    display: block;
+    margin-top: 15px;
+    
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+   
+}
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.column {
+    width: 48%;
+}
+
+
+
+.checkbox input[type="checkbox"] {
+    margin-right: 0px;
+}
+
+.checkbox label {
+    font-size: 16px;
+}
+
+/* Right Side: Order Summary Section */
+.order-summary {
+    width: 95%;
+   
+    padding: 30px;
+   
+}
+
+/* Order Summary Price Styling */
+.order-summary p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0;
+    font-size: 20px;
+}
+
+.price {
+    color: #2FBAB3;
+    font-weight: bold;
+}
+
+/* Discount Section */
+.discount-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.discount-section input {
+    width: 90%;
+    padding: 12px;
+    border: 2px solid #CCC;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.discount-section button {
+    padding: 10px 15px;
+    background-color: #CCC;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Order Summary Breakdown */
+.summary {
+    margin-top: 20px;
+}
+
+.summary hr {
+    margin: 0px 0;
+    border: none;
+    border-top: 1px solid #000;
+}
+
+.summary p {
+    font-size: 17px;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 15px;
+    color: #000;
+}
+
+/* Place Order Button */
+.order-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #FF7A00;
+   
+}
+
+/* Adding shadow effect */
+.order-summary, input[type="text"], input[type="email"], .discount-section input, .order-btn {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.discount-summary{
+    border: 2px solid black;
+    background-color: white;
+    padding: 20px 20px 20px 20px;
+}
+            .footer {
+
+padding: 20px 0;
+
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+
+}
+
+
+
+
+
+
+
+.footer-social {
+text-align: left;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+
+
+}
+@media screen and (min-width: 601px) and (max-width: 1024px){
+    .header-top {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 100px;
+
+
+            }
+
+            .header h1 {
+
+
+                font-size: 32px;
+                margin-left: 50px;
+
+                text-align: center;
+            }
+
+
+            .icons {
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+            .icon-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .icon-item i {
+                font-size: 20px;
+                margin-right: 8px;
+
+            }
+            .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 40px;
+    font-size: 16px;
+}
+
+
+.form-section {
+    width: 95%;
+}
+
+
+
+
+label {
+    display: block;
+    margin-top: 15px;
+    
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+   
+}
+
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.column {
+    width: 48%;
+}
+
+
+
+.checkbox input[type="checkbox"] {
+    margin-right: 0px;
+}
+
+.checkbox label {
+    font-size: 16px;
+}
+
+/* Right Side: Order Summary Section */
+.order-summary {
+    width: 95%;
+   
+    padding: 30px;
+   
+}
+
+/* Order Summary Price Styling */
+.order-summary p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0;
+    font-size: 20px;
+}
+
+.price {
+    color: #2FBAB3;
+    font-weight: bold;
+}
+
+/* Discount Section */
+.discount-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.discount-section input {
+    width: 90%;
+    padding: 12px;
+    border: 2px solid #CCC;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.discount-section button {
+    padding: 10px 15px;
+    background-color: #CCC;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Order Summary Breakdown */
+.summary {
+    margin-top: 20px;
+}
+
+.summary hr {
+    margin: 0px 0;
+    border: none;
+    border-top: 1px solid #000;
+}
+
+.summary p {
+    font-size: 17px;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 15px;
+    color: #000;
+}
+
+/* Place Order Button */
+.order-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #FF7A00;
+   
+}
+
+/* Adding shadow effect */
+.order-summary, input[type="text"], input[type="email"], .discount-section input, .order-btn {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.discount-summary{
+    border: 2px solid black;
+    background-color: white;
+    padding: 20px 20px 20px 20px;
+}
+            .footer {
+
+padding: 20px 0;
+
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+
+}
+
+
+
+
+
+
+
+.footer-social {
+text-align: left;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+
+    
+}
+
+    </style>
+</head>
+<body>
+     <!-- Header Top -->
+     <div class="header-top">
+        UP TO 40 % OFF | <a href="#">SHOP NOW</a>
+        <div class="icons">
+            <a href="/HOMEMADE/Pages/track orders.html" class="icon-item"><i class="fa fa-gift" style="font-size:24px"></i> Orders</a>
+            <a href="/HOMEMADE/Pages/Login page.html" class="icon-item"> &#x1F464; Login</a>
+            <a href="/HOMEMADE/Pages/order page.html" class="icon-item"><i class="fa fa-shopping-cart"></i> Cart</a>
+        </div>
+       
+    </div>
+
+    <!-- Main Header -->
+    <div class="header">
+       <a href="/HOMEMADE/Pages/Handmade.html"> <h1>Purely Handmade</h1></a>
+      
+    </div>
+    <div class="container">
+        <div class="form-section">
+            <h2>Shipping & Delivery</h2>
+            <form>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="">
+
+                <label for="address">Address</label>
+                <input type="text" id="address" placeholder="">
+
+                <div class="row">
+                    <div class="column">
+                       
+                        <input type="text" id="city" placeholder="city">
+                    </div>
+                    <div class="column">
+                        
+                        <input type="text" id="state" placeholder="state">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <label for="country">Country</label>
+                        <input type="text" id="country" placeholder="">
+                    </div>
+                    <div class="column">
+                        <label for="pincode">Pincode</label>
+                        <input type="text" id="pincode" placeholder="">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" placeholder="Enter a valid phone number">
+                    </div>
+                    <div class="column">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="example@gmail.com">
+                    </div>
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="save-info">
+                    <label for="save-info">Save this information for Next time</label>
+                </div>
+            </form>
+        </div>
+
+        <div class="order-summary">
+            <p>Natural Soap: Orange Extracted <span class="price">Rs. 360</span></p>
+            <p>Badam Infused Soap <span class="price">Rs. 420</span></p>
+            <br>
+            <br>
+
+        <div class="discount-summary">   <div class="discount-section">
+                <input type="text" placeholder="Discount Code or Gift Card">
+                <button>Apply</button>
+            </div>
+
+            <div class="summary">
+                <p>Sub Total <span>Rs. 780</span></p>
+                <p>Shipping <span>Rs. 50</span></p>
+                <hr>
+                <p class="total">Total <span>Rs. 830</span></p>
+            </div>
+        </div> 
+            <button class="order-btn">Place Order</button>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-social">
+          <div class="footer-logo">Purely Handmade</div><br>
+         <div class="social-icons">
+            <img src="/HOMEMADE/Images/fb (1).png" alt="Facebook" class="social-icon"> 
+            <img src="/HOMEMADE/Images/insta.png" alt="Instagram" class="social-icon">
+            <img src="/HOMEMADE/Images/whatsp.png" alt="Chat" class="social-icon">
+            <img src="/HOMEMADE/Images/twitter.png" alt="Twitter" class="social-icon">
+            <img src="/HOMEMADE/Images/linkin.png" alt="LinkedIn" class="social-icon">
+        </div>
+        </div>
+      
+        <div class="footer-section">
+          <h3>Products By Category</h3>
+          <ul>
+            <li><a href="#">Soap</a></li>
+            <li><a href="#">Oil</a></li>
+            <li><a href="#">Shampoo</a></li>
+            <li><a href="#">Candle</a></li>
+            <li><a href="#">Pickle</a></li>
+          </ul>
+        </div>
+      
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">For Partners</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">UnSubscribe</a></li>
+          </ul>
+        </div>
+      
+        <div class="footer-section">
+          <h3>Products By Type</h3>
+          <ul>
+            <li><a href="#">Skin Care</a></li>
+            <li><a href="#">Coconut Free</a></li>
+            <li><a href="#">Shea Butter Free</a></li>
+            <li><a href="#">Tree nut Free</a></li>
+            <li><a href="#">Gluten Free</a></li>
+          </ul>
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .grid-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .grid-gallery img {
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .grid-gallery img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-gallery">
+        <img src="./Images/f2.jpeg" alt="Image 1">
+        <img src="./Images/f3.jpeg" alt="Image 2">
+        <img src="./Images/f5.jpeg" alt="Image 3">
+    </div>
+</body>
+</html>

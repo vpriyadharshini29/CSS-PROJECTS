@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .progress-container {
+            width: 100%;
+            background-color: #f3f3f3;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .progress-bar {
+            width: 0;
+            height: 20px;
+            background-color: #4CAF50;
+            border-radius: 10px;
+            animation: grow 2s forwards;
+        }
+
+        @keyframes grow {
+            to {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+</body>
+</html>

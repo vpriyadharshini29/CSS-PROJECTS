@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet"> 
+      
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+
+  font-style: italic;
+        }
+            body {
+           
+            background-color: #FFF9F7;
+        }
+        a{
+            text-decoration: none;
+        }
+      /* Header Top */
+      .header-top {
+            background-color: #FFF9F7;
+            border-bottom: 1px solid #8b0000;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 12px;
+            color: #8b0000;
+        }
+
+        .header-top a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Main Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            background-color: #FFF9F7;
+        }
+
+        .header h1 {
+            font-family: "Moon Dance", cursive;
+  font-weight: 400;
+  font-style: italic;
+  font-variation-settings:
+    "wdth" 100;
+            color: #4d0900;
+            font-size: 52px;
+            margin-left: 560px;
+            text-align: center;
+        }
+
+        /* Icons and Links */
+        .icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            float: right;
+        }
+
+        .icon-item {
+            display: flex;
+            align-items: center;
+            color: #8b0000;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .icon-item i {
+            font-size: 20px;
+            margin-right: 8px;
+            color: #8b0000;
+        }
+
+        .icon-item:hover {
+            color: #8b0000;
+        }
+        /* Navbar */
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+        }
+        /* Search Bar */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .search-bar {
+            width: 700px;
+            padding: 10px;
+            border: 2px solid #8b0000;
+            border-radius: 5px 0 0 5px;
+            font-size: 16px;
+            color: #8b0000;
+            outline: none;
+        }
+
+        .search-bar::placeholder {
+            color: #8b0000;
+        }
+
+        .search-btn {
+            background-color: #8b0000;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-btn:hover {
+            background-color: #8b0000;
+            font-style: normal;
+        }
+
+        .search-btn i {
+            font-size: 16px;
+        }
+
+        /* Nav Bar */
+        .nav {
+            display: flex;
+            /* justify-content: center; */
+            background-color:#FFF9F7;
+            border-top: 1px solid #e6e6e6;
+            padding: 10px 0;
+        }
+
+        .nav-item {
+            margin: 0 20px;
+            font-weight: bold;
+            color: #8b0000;
+            text-transform: uppercase;
+            font-size: 16px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            background-color: #FFF9F7;
+        }
+
+        .nav-item:hover {
+            color: #8b0000;
+            background-color: #FFF9F7;
+        }
+.cart-container {
+    width: 80%;
+    margin: 40px auto;
+    background-color: #f7d3c7;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #EDEDED;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.cart-header h1 {
+    font-size: 36px;
+    color: #006241;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.continue-shopping {
+    font-size: 18px;
+    color: #006241;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.cart-table th {
+    padding: 15px;
+    text-align: left;
+    color: #8B0000;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-table td {
+    padding: 15px;
+    text-align: left;
+    font-size: 18px;
+    color: #333;
+    vertical-align: middle;
+}
+.samerow{
+    border: 2px solid black;
+    background-color: white;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+}
+
+.product-info img {
+    width: 80px;
+    margin-right: 15px;
+    border-radius: 10px;
+}
+
+.product-info p {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+.product-info span {
+    font-size: 14px;
+    color: #999;
+}
+
+.price, .total-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #8B0000;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-control button {
+    background-color: #FFF;
+    border: 1px solid #FF7A00;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #FF7A00;
+    border-radius: 5px;
+}
+
+.quantity-control input {
+    width: 40px;
+    text-align: center;
+    margin: 0 5px;
+    border: 1px solid #FF7A00;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.cart-summary {
+    text-align: right;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #8B0000;
+    font-weight: bold;
+    border: 2px solid #8B0000 ;
+    background-color: white;
+    width: 250px;
+    float: right;
+    text-align: center;
+    margin-right: 90px;
+}
+
+.checkout-btn {
+    display: block;
+    width: 25%;
+    padding: 15px 0;
+    background-color: #FF7A00;
+    color: white;
+    font-size: 22px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+
+.promo-section {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #006241;
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.promo-section p {
+    margin: 0;
+}
+.footer {
+  background-color: #F2C9B8; 
+  padding: 20px 0;
+  color: #006400; 
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  border-top: 1px solid black; 
+}
+
+.footer a {
+  color: #006400; 
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-section {
+  text-align: left;
+}
+
+.footer-section h3 {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #8B0000; 
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 5px;
+}
+
+.footer-social {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.footer-logo {
+  font-family: 'Brush Script MT', cursive; 
+  font-size: 2em;
+  color: #006400; 
+}
+
+
+.social-icon {
+  width: 10px;
+  height: 30px;
+  background-color: white; /* White background for icons */
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Example styling for the logo */
+.footer-logo {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2em;
+  color: #006400;
+}
+@media screen and (max-width:600px){
+    .header-top {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 100px;
+
+
+            }
+
+            .header h1 {
+
+
+                font-size: 32px;
+                margin-left: 50px;
+
+                text-align: center;
+            }
+
+
+            .icons {
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+            .icon-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .icon-item i {
+                font-size: 20px;
+                margin-right: 8px;
+
+            }
+
+
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            .search-container {
+                display: flex;
+
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .search-bar {
+                width: 250px;
+                padding: 10px;
+
+            }
+
+            .nav {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+            }
+            .cart-container {
+    width: 100%;
+    margin: 0px ;
+  
+    padding: 0px;
+   
+}
+
+.cart-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+
+
+
+
+.cart-table {
+    width: 100%;
+  display: block;
+    overflow-x:scroll;
+    white-space: nowrap;
+    
+    
+}
+
+
+
+.cart-table td {
+    padding: 15px;
+  
+}
+
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-info img {
+    width: 100%;
+    margin-right: 0px;
+    height: 200px;
+   
+}
+
+.product-info p {
+    margin: 0;
+}
+
+
+
+
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.quantity-control input {
+    width: 20px;
+    text-align: center;
+    margin: 0 0px;
+   
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.cart-summary {
+  
+    width: 100%;
+    float: right;
+    text-align: center;
+    margin-right: 0px;
+}
+
+.checkout-btn {
+    display: block;
+    width: 55%;
+    height: fit-content;
+  
+}
+
+.promo-section {
+   
+    padding: 15px;
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.promo-section p {
+    margin: 0;
+}
+            .footer {
+
+padding: 20px 0;
+
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+
+}
+
+
+
+
+
+
+
+.footer-social {
+text-align: left;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+
+}
+@media screen and (min-width: 601px) and (max-width: 1024px){
+    .header-top {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 100px;
+
+
+            }
+
+            .header h1 {
+
+
+                font-size: 32px;
+                margin-left: 50px;
+
+                text-align: center;
+            }
+
+
+            .icons {
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+            .icon-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .icon-item i {
+                font-size: 20px;
+                margin-right: 8px;
+
+            }
+
+
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            .search-container {
+                display: flex;
+
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .search-bar {
+                width: 250px;
+                padding: 10px;
+
+            }
+
+            .nav {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+            }
+            .cart-container {
+    width: 100%;
+    margin: 0px ;
+  
+    padding: 0px;
+   
+}
+
+.cart-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+
+
+
+
+.cart-table {
+    width: 100%;
+  display:inline block;
+    overflow-x:scroll;
+    white-space: nowrap;
+    
+    
+}
+
+
+
+.cart-table td {
+    padding: 15px;
+  
+}
+
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-info img {
+    width: 100%;
+    margin-right: 0px;
+    height: 200px;
+   
+}
+
+.product-info p {
+    margin: 0;
+}
+
+
+
+
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.quantity-control input {
+    width: 20px;
+    text-align: center;
+    margin: 0 0px;
+   
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.cart-summary {
+  
+    width: 100%;
+    float: right;
+    text-align: center;
+    margin-right: 0px;
+}
+
+.checkout-btn {
+    display: block;
+    width: 55%;
+    height: fit-content;
+  
+}
+
+.promo-section {
+   
+    padding: 15px;
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.promo-section p {
+    margin: 0;
+}
+            .footer {
+
+padding: 20px 0;
+
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+
+}
+
+
+
+
+
+
+
+.footer-social {
+text-align: left;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+    
+}
+
+    </style>
+</head>
+<body>
+  <!-- Header Top -->
+  <div class="header-top">
+    UP TO 40 % OFF | <a href="#">SHOP NOW</a>
+    <div class="icons">
+        <a href="/HOMEMADE/Pages/track orders.html" class="icon-item"><i class="fa fa-gift" style="font-size:24px"></i> Orders</a>
+        <a href="/HOMEMADE/Pages/Login page.html" class="icon-item"> &#x1F464; Login</a>
+        <a href="/HOMEMADE/Pages/order page.html" class="icon-item"><i class="fa fa-shopping-cart"></i> Cart</a>
+    </div>
+   
+</div>
+
+<!-- Main Header -->
+<div class="header">
+   <a href="/HOMEMADE/Pages/Handmade.html"> <h1>Purely Handmade</h1></a>
+  
+  </div>
+  <div class="navbar"> <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search for Products">
+        <button class="search-btn"><i class="material-icons" style="font-size:36px"></i> </button>
+    </div>
+
+    <!-- Nav Bar -->
+    <div class="nav">
+        <a href="/HOMEMADE/Pages/soap page.html" class="nav-item">Soap</a>
+        <a href="/HOMEMADE/Pages/oil page.html" class="nav-item">Oil</a>
+        <a href="/HOMEMADE/Pages/Shampoo page.html" class="nav-item">Shampoo</a>
+        <a href="/HOMEMADE/Pages/Candle page.html" class="nav-item">Candle</a>
+        <a href="/HOMEMADE/Pages/Pickle Page.html" class="nav-item">Pickle</a>
+    </div>
+</div>
+    <div class="cart-container">
+        <div class="cart-header">
+            <h1>CART</h1>
+            <a href="#" class="continue-shopping">Continue Shopping</a>
+        </div>
+
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="samerow">
+                    <td class="product-info">
+                        <img src="/HOMEMADE/Images/soap/orange.png" alt="Natural Soap">
+                        <div>
+                            <p>Natural Soap: Orange Extracted</p>
+                            <span>Pack of 2</span>
+                        </div>
+                    </td>
+                    <td class="price">₹ 180</td>
+                    <td class="quantity">
+                        <div class="quantity-control">
+                            <button>-</button>
+                            <input type="text" value="1">
+                            <button>+</button>
+                        </div>
+                    </td>
+                    <td class="total-price">₹ 360</td>
+                    <td><span class="glyphicon glyphicon-trash"></span></td>
+                </tr>
+
+                <tr class="samerow">
+                    <td class="product-info">
+                        <img src="/HOMEMADE/Images/soap/badam.png" alt="Badam Infused Soap">
+                        <div>
+                            <p>Badam Infused Soap</p>
+                            <span>Pack of 1</span>
+                        </div>
+                    </td>
+                    <td class="price">₹ 420</td>
+                    <td class="quantity">
+                        <div class="quantity-control">
+                            <button>-</button>
+                            <input type="text" value="1">
+                            <button>+</button>
+                        </div>
+                    </td>
+                    <td class="total-price">₹ 420</td>
+                    <td><span class="glyphicon glyphicon-trash"></span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="cart-summary">
+            <p>Sub Total <span>₹ 780</span></p>
+        </div>
+
+        <button class="checkout-btn">CHECK OUT</button>
+
+        <div class="promo-section">
+            <p>Flat 10% off on your First Order | Use Code: FIRSTHOME</p>
+            <p>Get Assured Free Gifts On First Order</p>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-social">
+          <div class="footer-logo">Purely Handmade</div><br>
+         <div class="social-icons">
+            <img src="/HOMEMADE/Images/fb (1).png" alt="Facebook" class="social-icon"> 
+            <img src="/HOMEMADE/Images/insta.png" alt="Instagram" class="social-icon">
+            <img src="/HOMEMADE/Images/whatsp.png" alt="Chat" class="social-icon">
+            <img src="/HOMEMADE/Images/twitter.png" alt="Twitter" class="social-icon">
+            <img src="/HOMEMADE/Images/linkin.png" alt="LinkedIn" class="social-icon">
+        </div>
+        </div>
+      
+        <div class="footer-section">
+          <h3>Products By Category</h3>
+          <ul>
+            <li><a href="#">Soap</a></li>
+            <li><a href="#">Oil</a></li>
+            <li><a href="#">Shampoo</a></li>
+            <li><a href="#">Candle</a></li>
+            <li><a href="#">Pickle</a></li>
+          </ul>
+        </div>
+      
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">For Partners</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">UnSubscribe</a></li>
+          </ul>
+        </div>
+      
+        <div class="footer-section">
+          <h3>Products By Type</h3>
+          <ul>
+            <li><a href="#">Skin Care</a></li>
+            <li><a href="#">Coconut Free</a></li>
+            <li><a href="#">Shea Butter Free</a></li>
+            <li><a href="#">Tree nut Free</a></li>
+            <li><a href="#">Gluten Free</a></li>
+          </ul>
+        </div>
+      </div>
+</body>
+</html>

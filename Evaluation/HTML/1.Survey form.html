@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Survey Form</title>
+</head>
+<body>
+
+    <h1>Simple Survey Form</h1>
+    
+    <form action="#" method="post">
+        
+       
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Your name" required><br><br>
+        
+       
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Your email" required><br><br>
+        
+       
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" placeholder="Your age" required><br><br>
+        
+      
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="other" required>
+        <label for="other">Other</label><br><br>
+        
+       
+        <label>Hobbies (Check all that apply):</label><br>
+        <input type="checkbox" id="reading" name="hobbies" value="reading">
+        <label for="reading">Reading</label><br>
+        <input type="checkbox" id="traveling" name="hobbies" value="traveling">
+        <label for="traveling">Traveling</label><br>
+        <input type="checkbox" id="sports" name="hobbies" value="sports">
+        <label for="sports">Sports</label><br>
+        <input type="checkbox" id="music" name="hobbies" value="music">
+        <label for="music">Music</label><br><br>
+
+       
+        <label for="comments">Additional Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea><br><br>
+
+       
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>

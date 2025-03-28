@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Turmeric Glow Soap</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet"> 
+     
+    <style>
+         
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        body {
+           
+            background-color: rgb(251, 242, 239);
+
+
+            height: 100vh;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        .header-top {
+            background-color: rgb(251, 242, 239);
+            border-bottom: 1px solid #8b0000;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 12px;
+            color: #8b0000;
+        }
+
+        .header-top a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Main Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            background-color: rgb(251, 242, 239);
+        }
+
+        .header h1 {
+            font-family: "Moon Dance", cursive;
+            font-weight: 400;
+            font-style: italic;
+            font-variation-settings:
+                "wdth" 100;
+            color: #4d0000;
+            font-size: 52px;
+            margin-left: 560px;
+            text-align: center;
+        }
+            /* Icons and Links */
+            .icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            float: right;
+        }
+
+        .icon-item {
+            display: flex;
+            align-items: center;
+            color: #004d00;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .icon-item i {
+            font-size: 20px;
+            margin-right: 8px;
+            color: #8b0000;
+        }
+
+        .icon-item:hover {
+            color: #8b0000;
+        }
+           /* Navbar */
+           .navbar{
+            display: flex;
+            justify-content: space-between;
+        }
+        /* Search Bar */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .search-bar {
+            width: 700px;
+            padding: 10px;
+            border: 2px solid #4d0000;
+            border-radius: 5px 0 0 5px;
+            font-size: 16px;
+            color: #4d0000;
+            outline: none;
+        }
+
+        .search-bar::placeholder {
+            color: #4d0000;
+        }
+
+        .search-btn {
+            background-color: #4d0000;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-btn:hover {
+            background-color: #4d0000;
+        }
+
+        .search-btn i {
+            font-size: 16px;
+        }
+
+        /* Nav Bar */
+        .nav {
+            display: flex;
+            /* justify-content: center; */
+            background-color:rgb(251, 242, 239);
+            border-top: 1px solid #e6e6e6;
+            padding: 10px 0;
+        }
+
+        .nav-item {
+            margin: 0 20px;
+            font-weight: bold;
+            color: #4d2900;
+            text-transform: uppercase;
+            font-size: 16px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            background-color: rgb(251, 242, 239);
+        }
+
+        .nav-item:hover {
+            color: #c90202;
+            background-color: rgb(251, 242, 239);
+        }
+
+        body {
+          
+            background-color: rgb(251, 242, 239);
+            
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fce8e1; /* Light peach background */
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image-section {
+            width: 45%;
+        }
+
+        .image-section img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .text-section {
+            width: 50%;
+            padding-left: 20px;
+        }
+
+        .container .title {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 2.5em;
+            color: #8b4513; /* Brown color */
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 0.9em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .ingredients-title {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 2em;
+            color: #8b4513; /* Brown color */
+            margin-bottom: 10px;
+        }
+
+        .ingredient {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .ingredient span {
+            font-size: 1.2em;
+            color: #228b22; /* Green color */
+            margin-right: 10px;
+        }
+
+        .ingredient p {
+            font-size: 0.9em;
+            margin: 0;
+        }
+        .container-1 {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fce8e1; /* Light peach background */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .left-section {
+            width: 50%;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        .right-section {
+            width: 65%;
+            text-align: center;
+        }
+
+        .price-title {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.2em;
+            color: #8b0000;
+            margin-bottom: 5px;
+
+        }
+
+        .price-boxes {
+            display: flex;
+            justify-content:center;
+            margin-bottom: 15px;
+        }
+
+        .price-box {
+            border: 1px solid #822020;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-left: 10px;
+            text-align: center;
+            background-color: white;
+            font-size: 24px;
+        }
+
+        .price-box span {
+            font-weight: bold;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .add-to-cart-button {
+            background-color: #ffa500;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .how-to-use-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .how-to-use-title {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 2em;
+            color: #8b4513; /* Brown color */
+            margin-bottom: 20px;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .step {
+            width: 150px;
+            text-align: center;
+        }
+
+        .step-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 10px;
+            background-color: white;
+        }
+
+        .step-circle p {
+            font-size: 0.9em;
+            text-align: center;
+            line-height: 1.2; /* Adjust line height for better text wrapping */
+        }
+
+        .step-arrow {
+            font-size: 2em;
+            color: #888;
+        }
+
+        /* Match the text in the image */
+        .left-section {
+            white-space: pre-line; /* Preserve line breaks */
+        }
+
+        .price-box {
+            font-size: 0.9em; /* Match font size */
+        }
+
+        .add-to-cart-button {
+            font-size: 1em; /* Match font size */
+        }
+
+        .step-circle p {
+            word-break: break-word; /* Allow text to wrap within the circle */
+        }
+        .container-2 {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container-2 .title {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 2em;
+            color: #8b4513;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .reviews {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .review-card {
+            width: 25%;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .review-text {
+            font-style: italic;
+            font-size: 0.9em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #333;
+            white-space: pre-line; /* Preserve line breaks */
+        }
+
+        .reviewer {
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .stars {
+            color: gold;
+            font-size: 1.2em;
+        }
+
+        /* Adjustments to match image */
+        .review-card {
+            border: 2px solid #ccc; /* Add border */
+            padding: 25px; /* Increase padding */
+        }
+
+        .reviewer {
+            font-family: 'Times New Roman', serif; /* Match font */
+            font-size: 1em; /* Adjust font size */
+        }
+
+        .stars {
+            margin-top: 10px; /* Add space between reviewer and stars */
+        }
+        .footer {
+  background-color: #F2C9B8; /* Light peach background */
+  padding: 20px 0;
+  color: #006400; /* Dark green text */
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  border-top: 1px solid black; /* Black border on top */
+}
+
+.footer a {
+  color: #006400; /* Dark green links */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-section {
+  text-align: left;
+}
+
+.footer-section h3 {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #8B0000; /* Dark red for headings */
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 5px;
+}
+
+.footer-social {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.footer-logo {
+  font-family: 'Brush Script MT', cursive; /* Example font, adjust as needed */
+  font-size: 2em;
+  color: #006400; /* Dark green logo text */
+}
+
+/* Social media icons (replace with your actual icons) */
+.social-icon {
+  width: 10px;
+  height: 30px;
+  background-color: white; /* White background for icons */
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Example styling for the logo */
+.footer-logo {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2em;
+  color: #006400;
+}
+@media screen and (max-width:600px){
+    .header-top {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 100px;
+
+
+            }
+
+            .header h1 {
+
+
+                font-size: 32px;
+                margin-left: 20px;
+
+                text-align: center;
+            }
+
+
+            .icons {
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+            .icon-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .icon-item i {
+                font-size: 20px;
+                margin-right: 5px;
+
+            }
+
+
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            .search-container {
+                display: flex;
+
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .search-bar {
+                width: 250px;
+                padding: 10px;
+
+            }
+
+
+
+
+
+
+
+            .nav {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+            }
+            .container {
+            width: 100%;
+            margin: 0px ;
+            background-color: #fce8e1; 
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .image-section {
+            width: 100%;
+        }
+
+        .image-section img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .text-section {
+            width: 100%;
+            padding-left: 0px;
+        }
+
+        
+
+       
+
+       
+
+        .ingredient {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .ingredient span {
+          
+            margin-right: 0px;
+        }
+
+      
+        .container-1 {
+            width: 100%;
+            margin: 0px ;
+          
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .left-section {
+            width: 100%;
+            text-align: center;
+           
+        }
+
+        .right-section {
+            width: 100%;
+            text-align: center;
+        }
+
+        .price-title {
+           
+            font-size: 1.2em;
+            color: #8b0000;
+            margin-bottom: 5px;
+
+        }
+
+        .price-boxes {
+            display: flex;
+            justify-content:center;
+            margin-bottom: 15px;
+        }
+
+        .price-box {
+            border: 1px solid #822020;
+            padding: 2px 5px;
+            border-radius: 5px;
+            margin-left: 0px;
+            text-align: center;
+            background-color: white;
+            font-size: 24px;
+        }
+
+       
+
+       
+
+        .how-to-use-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        
+
+        .steps {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .step {
+            width: 100%;
+            text-align: center;
+        }
+
+        .step-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0  0px;
+            background-color: white;
+        }
+
+        .step-circle p {
+            font-size: 0.9em;
+            text-align: center;
+            line-height: 1.2; /* Adjust line height for better text wrapping */
+        }
+
+        .step-arrow {
+           
+            display: none;
+        }
+
+        /* Match the text in the image */
+        .left-section {
+            white-space: pre-line; /* Preserve line breaks */
+        }
+
+        .price-box {
+            font-size: 0.9em; /* Match font size */
+        }
+
+        .add-to-cart-button {
+            font-size: 1em; /* Match font size */
+        }
+
+        .step-circle p {
+            word-break: break-word; /* Allow text to wrap within the circle */
+        }
+        .container-2 {
+            width: 100%;
+            margin: 0px ;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container-2 .title {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 2em;
+            color: #8b4513; /* Brown color */
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .reviews {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .review-card {
+            width: 95%;
+           
+            padding: 20px;
+          
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+       
+
+       
+
+      
+
+        /* Adjustments to match image */
+        .review-card {
+            
+            
+            padding: 25px; /* Increase padding */
+        }
+
+       
+
+        .stars {
+            margin-top: 10px; /* Add space between reviewer and stars */
+        }
+            .footer {
+
+padding: 20px 0;
+
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+
+}
+
+
+
+
+
+
+
+.footer-social {
+text-align: left;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+
+}
+@media screen and (min-width: 601px) and (max-width: 1024px){
+    .header-top {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 100px;
+
+
+            }
+
+            .header h1 {
+
+
+                font-size: 32px;
+                margin-left: 20px;
+
+                text-align: center;
+            }
+
+
+            .icons {
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+            .icon-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .icon-item i {
+                font-size: 20px;
+                margin-right: 5px;
+
+            }
+
+
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            .search-container {
+                display: flex;
+
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .search-bar {
+                width: 250px;
+                padding: 10px;
+
+            }
+
+
+
+
+
+
+
+            .nav {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+            }
+            .container {
+            width: 100%;
+            margin: 0px ;
+            background-color: #fce8e1; 
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .image-section {
+            width: 100%;
+        }
+
+        .image-section img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .text-section {
+            width: 100%;
+            padding-left: 0px;
+        }
+
+        
+
+       
+
+       
+
+        .ingredient {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .ingredient span {
+          
+            margin-right: 0px;
+        }
+
+      
+        .container-1 {
+            width: 100%;
+            margin: 0px ;
+          
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .left-section {
+            width: 100%;
+            text-align: center;
+           
+        }
+
+        .right-section {
+            width: 100%;
+            text-align: center;
+        }
+
+        .price-title {
+           
+            font-size: 1.2em;
+            color: #8b0000;
+            margin-bottom: 5px;
+
+        }
+
+        .price-boxes {
+            display: flex;
+            justify-content:center;
+            margin-bottom: 15px;
+        }
+
+        .price-box {
+            border: 1px solid #822020;
+            padding: 2px 5px;
+            border-radius: 5px;
+            margin-left: 0px;
+            text-align: center;
+            background-color: white;
+            font-size: 24px;
+        }
+
+       
+
+       
+
+        .how-to-use-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        
+
+        .steps {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .step {
+            width: 100%;
+            text-align: center;
+        }
+
+        .step-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0  0px;
+            background-color: white;
+        }
+
+        .step-circle p {
+            font-size: 0.9em;
+            text-align: center;
+            line-height: 1.2; /* Adjust line height for better text wrapping */
+        }
+
+        .step-arrow {
+           
+            display: none;
+        }
+
+        /* Match the text in the image */
+        .left-section {
+            white-space: pre-line; /* Preserve line breaks */
+        }
+
+        .price-box {
+            font-size: 0.9em; /* Match font size */
+        }
+
+        .add-to-cart-button {
+            font-size: 1em; /* Match font size */
+        }
+
+        .step-circle p {
+            word-break: break-word; /* Allow text to wrap within the circle */
+        }
+        .container-2 {
+            width: 100%;
+            margin: 0px ;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container-2 .title {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 2em;
+            color: #8b4513; /* Brown color */
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .reviews {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .review-card {
+            width: 95%;
+           
+            padding: 20px;
+          
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+       
+
+       
+
+      
+
+        /* Adjustments to match image */
+        .review-card {
+            
+            
+            padding: 25px; /* Increase padding */
+        }
+
+       
+
+        .stars {
+            margin-top: 10px; /* Add space between reviewer and stars */
+        }
+            .footer {
+
+padding: 20px 0;
+
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+
+}
+
+
+
+
+
+
+
+.footer-social {
+text-align: left;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+}
+    </style>
+</head>
+<body>
+    <!-- Header Top -->
+    <div class="header-top">
+        UP TO 40 % OFF | <a href="#">SHOP NOW</a>
+        <div class="icons">
+            <a href="/HOMEMADE/Pages/track orders.html" class="icon-item"><i class="fa fa-gift" style="font-size:24px"></i> Orders</a>
+            <a href="/HOMEMADE/Pages/Login page.html" class="icon-item"> &#x1F464; Login</a>
+            <a href="/HOMEMADE/Pages/order page.html" class="icon-item"><i class="fa fa-shopping-cart"></i> Cart</a>
+        </div>
+       
+    </div>
+
+    <!-- Main Header -->
+    <div class="header">
+       <a href="/HOMEMADE/Pages/Handmade.html"> <h1>Purely Handmade</h1></a>
+      
+    </div>
+
+   <div class="navbar"> <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search for Products">
+        <button class="search-btn"><i class="material-icons" style="font-size:36px"></i> </button>
+    </div>
+
+    <!-- Nav Bar -->
+    <div class="nav">
+        <a href="/HOMEMADE/Pages/soap page.html" class="nav-item">Soap</a>
+        <a href="/HOMEMADE/Pages/oil page.html" class="nav-item">Oil</a>
+        <a href="/HOMEMADE/Pages/Shampoo page.html" class="nav-item">Shampoo</a>
+        <a href="/HOMEMADE/Pages/Candle page.html" class="nav-item">Candle</a>
+        <a href="/HOMEMADE/Pages/Pickle Page.html" class="nav-item">Pickle</a>
+    </div>
+</div>
+    <div class="container">
+        <div class="image-section">
+            <img src="/HOMEMADE/Images/soap/turmeric.png" alt="Turmeric Soap">
+        </div>
+
+        <div class="text-section">
+            <h1 class="title">Unlock the Power of Turmeric for Radiant Skin!</h1>
+            <p class="description">
+                Infused with the natural goodness turmeric, our Handmade Turmeric Glow Soap is crafted to cleanse, nourish, and brighten your skin. Whether you struggle with acne, dark spots, or dullness, this soap provides a gentle yet effective skincare solution.
+            </p>
+
+            <h2 class="ingredients-title">Key Ingredients</h2>
+
+            <div class="ingredient">
+                <span>✔</span>
+                <p>Turmeric - Reduces pigmentation & boosts glow.</p>
+            </div>
+
+            <div class="ingredient">
+                <span>✔</span>
+                <p>Coconut Oil - Hydrates & nourishes deeply.</p>
+            </div>
+
+            <div class="ingredient">
+                <span>✔</span>
+                <p>Olive Oil - Softens & protects against dryness.</p>
+            </div>
+
+            <div class="ingredient">
+                <span>✔</span>
+                <p>Essential Oils - Infuse a refreshing, calming fragrance.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-1">
+        <div class="top-section">
+            <div class="left-section">
+                Ships usually in 1-2 business days.<br>
+                Hassle-Free Returns within 10 Days.<br>
+                Free shipping on Orders over Rs.1000.<br>
+                Shipping Times may vary during Holiday Season.
+            </div>
+            <div class="right-section">
+                <h2 class="price-title">Price</h2>
+                <div class="price-boxes">
+                    <div class="price-box">
+                        <span>₹ 780</span><br>
+                        100g
+                    </div>
+                    <div class="price-box">
+                        <span>₹ 1000</span><br>
+                        200g
+                    </div>
+                
+                
+            </div>
+            <button class="add-to-cart-button">ADD TO CART</button>
+            </div>
+        </div>
+
+        <div class="how-to-use-section">
+            <h2 class="how-to-use-title">How to Use?</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-circle">
+                        <p>Wet your skin with lukewarm water.</p>
+                    </div>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-circle">
+                        <p>Lather the soap between your hands or on a loofah.</p>
+                    </div>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-circle">
+                        <p>Massage gently onto your face & body in circular motions.</p>
+                    </div>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-circle">
+                        <p>Rinse off thoroughly & pat dry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-2">
+        <h1 class="title">Customer Reviews</h1>
+        <div class="reviews">
+            <div class="review-card">
+                <div class="review-text">
+                    "This soap is a game-
+                    changer! My skin feels soft,
+                    and the turmeric really
+                    helps with my acne!"
+                </div>
+                <div class="reviewer">- Priya M.</div>
+                <div class="stars">
+                    &#9733;&#9733;&#9733;&#9733;&#9733;
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-text">
+                    "Absolutely love the natural
+                    fragrance and how gentle it
+                    is on my skin!"
+                </div>
+                <div class="reviewer">- Anita R.</div>
+                <div class="stars">
+                    &#9733;&#9733;&#9733;&#9733;&#9733;
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-social">
+          <div class="footer-logo">Purely Handmade</div><br>
+         <div class="social-icons">
+            <img src="/HOMEMADE/Images/fb (1).png" alt="Facebook" class="social-icon"> 
+            <img src="/HOMEMADE/Images/insta.png" alt="Instagram" class="social-icon">
+            <img src="/HOMEMADE/Images/whatsp.png" alt="Chat" class="social-icon">
+            <img src="/HOMEMADE/Images/twitter.png" alt="Twitter" class="social-icon">
+            <img src="/HOMEMADE/Images/linkin.png" alt="LinkedIn" class="social-icon">
+        </div>
+        </div>
+      
+        <div class="footer-section">
+          <h3>Products By Category</h3>
+          <ul>
+            <li><a href="#">Soap</a></li>
+            <li><a href="#">Oil</a></li>
+            <li><a href="#">Shampoo</a></li>
+            <li><a href="#">Candle</a></li>
+            <li><a href="#">Pickle</a></li>
+          </ul>
+        </div>
+      
+        <div class="footer-section">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">For Partners</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">UnSubscribe</a></li>
+          </ul>
+        </div>
+      
+        <div class="footer-section">
+          <h3>Products By Type</h3>
+          <ul>
+            <li><a href="#">Skin Care</a></li>
+            <li><a href="#">Coconut Free</a></li>
+            <li><a href="#">Shea Butter Free</a></li>
+            <li><a href="#">Tree nut Free</a></li>
+            <li><a href="#">Gluten Free</a></li>
+          </ul>
+        </div>
+      </div>
+</body>
+</html>

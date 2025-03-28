@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soap Product Display</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet"> 
+      
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+
+  font-style: italic;
+        }
+            body {
+           
+            background-color: #FFF9F7;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* Header Top */
+        .header-top {
+            background-color: #FFF9F7;
+            border-bottom: 1px solid #8b0000;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 12px;
+            color: #8b0000;
+        }
+
+        .header-top a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Main Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            background-color: #FFF9F7;
+        }
+
+        .header h1 {
+            font-family: "Moon Dance", cursive;
+  font-weight: 400;
+  font-style: italic;
+  font-variation-settings:
+    "wdth" 100;
+            color: #4d0900;
+            font-size: 52px;
+            margin-left: 560px;
+            text-align: center;
+        }
+
+        /* Icons and Links */
+        .icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            float: right;
+        }
+
+        .icon-item {
+            display: flex;
+            align-items: center;
+            color: #8b0000;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .icon-item i {
+            font-size: 20px;
+            margin-right: 8px;
+            color: #8b0000;
+        }
+
+        .icon-item:hover {
+            color: #8b0000;
+        }
+        /* Navbar */
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+        }
+        /* Search Bar */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .search-bar {
+            width: 700px;
+            padding: 10px;
+            border: 2px solid #8b0000;
+            border-radius: 5px 0 0 5px;
+            font-size: 16px;
+            color: #8b0000;
+            outline: none;
+        }
+
+        .search-bar::placeholder {
+            color: #8b0000;
+        }
+
+        .search-btn {
+            background-color: #8b0000;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-btn:hover {
+            background-color: #8b0000;
+            font-style: normal;
+        }
+
+        .search-btn i {
+            font-size: 16px;
+        }
+
+        /* Nav Bar */
+        .nav {
+            display: flex;
+            /* justify-content: center; */
+            background-color:#FFF9F7;
+            border-top: 1px solid #e6e6e6;
+            padding: 10px 0;
+        }
+
+        .nav-item {
+            margin: 0 20px;
+            font-weight: bold;
+            color: #8b0000;
+            text-transform: uppercase;
+            font-size: 16px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            background-color: #FFF9F7;
+        }
+
+        .nav-item:hover {
+            color: #8b0000;
+            background-color: #FFF9F7;
+        }
+        .Home-image {
+            position: relative;
+        }
+        .Home-image h1{
+            position: absolute;
+           font-size: 45px;
+            top:25%;
+            left:45%;
+            right: 10%;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #FFE6E2;
+            border: 2px solid #FF7A00;
+           
+        }
+        .sidebar a{
+            text-decoration: none;
+        }
+
+        .category {
+            width: 160px;
+            height: 160px;
+            border: 2px solid #FF7A00;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            margin-bottom: 30px;
+            color: #333;
+            background-color: white;
+        }
+
+        .category-text {
+            font-size: 22px;
+            font-weight: bold;
+            font-family: 'Brush Script MT', cursive;
+        }
+
+        .category-subtext {
+            font-size: 18px;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        /* Product List Styling */
+        .product-flex {
+            width: 80%;
+            height: 1000px;
+            /* Height limit for scrolling */
+            overflow-y: scroll;
+            /* Enable vertical scrolling */
+            display: flex;
+            flex-direction: column;
+            /*  Stack products vertically */
+            gap: 20px;
+            /* Space between products */
+            padding: 10px;
+            /* Padding around the products */
+            scrollbar-width: none;
+            /* Hide scrollbar for Firefox */
+            border: 2px solid #FF7A00;
+        }
+
+        /* Hide scrollbar for WebKit browsers */
+        .product-flex::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Ensure smooth scrolling */
+        .product-flex {
+            -ms-overflow-style: none;
+            /* Hide scrollbar for IE 10+ */
+            scroll-behavior: smooth;
+            /* Smooth scrolling */
+        }
+
+        .product-card {
+            background-color: #FFF9F7;
+            border: 1px solid #FF7A00;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            /* Adjust width to fill container */
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .product-card h3 {
+            color: #2A456C;
+            font-size: 18px;
+            margin: 10px 0;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+        }
+
+        .price {
+            font-size: 22px;
+            color: #8B0000;
+            font-weight: bold;
+            margin-bottom: 10px;
+            float: left;
+        }
+
+        .rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            margin-bottom: 10px;
+            float: right;
+        }
+
+        .rating span {
+            color: #FF7A00;
+            font-size: 18px;
+        }
+
+        .reviews {
+            margin-left: 5px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        /* Button Styling */
+        .add-to-bag {
+            background-color: #FF7A00;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .add-to-bag:hover {
+            background-color: #E06B00;
+        }
+
+        .product-list {
+            display: flex;
+
+        }
+        @media screen and (max-width:600px){
+
+            .header-top {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 100px;
+
+
+            }
+
+            .header h1 {
+
+
+                font-size: 32px;
+                margin-left: 50px;
+
+                text-align: center;
+            }
+
+
+            .icons {
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+            .icon-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .icon-item i {
+                font-size: 20px;
+                margin-right: 8px;
+
+            }
+
+
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            .search-container {
+                display: flex;
+
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .search-bar {
+                width: 250px;
+                padding: 10px;
+
+            }
+
+
+
+
+
+
+
+            .nav {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+            }
+
+
+
+
+            .Home-image img {
+                width: 100%;
+                height: 300px;
+            }
+
+            .Home-image h1 {
+
+                font-size: 25px;
+
+            }
+            .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0px ;
+        }
+
+       
+        .sidebar {
+            width: 28%;
+            display: flex;
+            flex-direction: column;
+           
+            padding: 0px;
+          
+
+        }
+
+      
+
+        .category {
+            width: 80px;
+            height: 80px;
+           
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            margin-bottom: 30px;
+          
+        }
+
+        .category-text {
+            font-size: 18px;
+           
+        }
+
+       
+
+       
+        .product-flex {
+            width: 70%;
+            height: 700px;
+           
+            overflow-y: scroll;
+          
+            display: flex;
+            flex-direction: column;
+           
+            /* gap: 10px; */
+           
+            padding: 0px;
+            
+         
+          
+        }
+
+        
+       
+        .product-card {
+          
+            padding: 0px;
+            width: 100%;
+           
+           
+        }
+
+       
+        .product-card img {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .product-card h3 {
+          
+            margin: 0px 0;
+          
+        }
+
+        .price {
+            font-size: 22px;
+          
+            margin-bottom: 10px;
+          
+        }
+
+        .rating {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            margin-bottom: 10px;
+           
+        }
+
+       
+
+        .reviews {
+            margin-left: 5px;
+            font-size: 14px;
+            color: #888;
+        }
+
+       
+        .add-to-bag {
+          
+            padding: 5px 10px;
+           
+           
+        }
+
+      
+
+        .product-list {
+            display: flex;
+            flex-direction: column;
+
+        }
+            .footer {
+
+padding: 20px 0;
+
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+
+}
+
+
+
+
+
+
+
+.footer-social {
+text-align: left;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+}
+@media screen and (min-width: 601px) and (max-width: 1024px){
+    .header-top {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 100px;
+
+
+            }
+
+            .header h1 {
+
+
+                font-size: 32px;
+                margin-left: 0px;
+
+                text-align: center;
+            }
+
+
+            .icons {
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+            .icon-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .icon-item i {
+                font-size: 20px;
+                margin-right: 5px;
+
+            }
+
+
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            .search-container {
+                display: flex;
+
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .search-bar {
+                width: 250px;
+                padding: 0px;
+
+            }
+
+
+
+
+
+
+
+            .nav {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+            }
+
+
+
+
+            .Home-image img {
+                width: 100%;
+                height: 300px;
+            }
+
+            .Home-image h1 {
+
+                font-size: 25px;
+
+            }
+            .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0px ;
+        }
+
+       
+        .sidebar {
+            width: 28%;
+            display: flex;
+            flex-direction: column;
+           
+            padding: 0px;
+          
+
+        }
+
+      
+
+        .category {
+            width: 80px;
+            height: 80px;
+           
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            margin-bottom: 30px;
+          
+        }
+
+        .category-text {
+            font-size: 18px;
+           
+        }
+
+       
+
+       
+        .product-flex {
+            width: 70%;
+            height: 700px;
+           
+            overflow-y: scroll;
+          
+            display: flex;
+            flex-direction: column;
+           
+            /* gap: 10px; */
+           
+            padding: 0px;
+            
+         
+          
+        }
+
+        
+       
+        .product-card {
+          
+            padding: 0px;
+            width: 100%;
+           
+           
+        }
+
+       
+        .product-card img {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .product-card h3 {
+          
+            margin: 0px 0;
+          
+        }
+
+        .price {
+            font-size: 22px;
+          
+            margin-bottom: 10px;
+          
+        }
+
+        .rating {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            margin-bottom: 10px;
+           
+        }
+
+       
+
+        .reviews {
+            margin-left: 5px;
+            font-size: 14px;
+            color: #888;
+        }
+
+       
+        .add-to-bag {
+          
+            padding: 5px 10px;
+           
+           
+        }
+
+      
+
+        .product-list {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+            .footer {
+
+                padding: 0px 0;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+            }
+
+
+
+
+
+
+
+            .footer-social {
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+
+
+    
+}
+    </style>
+</head>
+
+<body>
+    <!-- Header Top -->
+    <div class="header-top">
+        UP TO 40 % OFF | <a href="#">SHOP NOW</a>
+        <div class="icons">
+            <a href="/HOMEMADE/Pages/track orders.html" class="icon-item"><i class="fa fa-gift" style="font-size:24px"></i> Orders</a>
+            <a href="/HOMEMADE/Pages/Login page.html" class="icon-item"> &#x1F464; Login</a>
+            <a href="/HOMEMADE/Pages/order page.html" class="icon-item"><i class="fa fa-shopping-cart"></i> Cart</a>
+        </div>
+       
+    </div>
+
+    <!-- Main Header -->
+    <div class="header">
+       <a href="/HOMEMADE/Pages/Handmade.html"> <h1>Purely Handmade</h1></a>
+      
+    </div>
+
+   <div class="navbar"> <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search for Products">
+        <button class="search-btn"><i class="material-icons" style="font-size:36px"></i> </button>
+    </div>
+
+    <!-- Nav Bar -->
+    <div class="nav">
+        <a href="/HOMEMADE/Pages/soap page.html" class="nav-item">Soap</a>
+        <a href="/HOMEMADE/Pages/oil page.html" class="nav-item">Oil</a>
+        <a href="/HOMEMADE/Pages/Shampoo page.html" class="nav-item">Shampoo</a>
+        <a href="/HOMEMADE/Pages/Candle page.html" class="nav-item">Candle</a>
+        <a href="/HOMEMADE/Pages/Pickle Page.html" class="nav-item">Pickle</a>
+    </div>
+</div>
+<!-- Background -->
+<div class="Home-image">
+ 
+  <img src="/HOMEMADE/Images/pickle/pickle back.png"height="600px"width="100%"></img>
+ 
+</div>
+  <div class="container">
+      <!-- Sidebar Categories -->
+      <div class="sidebar">
+          <div class="category">
+           <a href="#Vegetable">   <span class="category-text">Vegetable</span><br><span class="category-subtext">Pickles</span></a>
+          </div>
+           <div class="category">
+           <a href="#Fruit">   <span class="category-text">Fruit</span><br><span class="category-subtext">Pickles</span></a>
+          </div>
+           <div class="category">
+           <a href="#Oil">   <span class="category-text">Oil</span><br><span class="category-subtext">Pickles</span></a>
+          </div>
+           <div class="category">
+           <a href="#Indian ">   <span class="category-text">Indian</span><br><span class="category-subtext">Pickles</span></a>
+          </div>
+           <div class="category">
+           <a href="#Mixed">   <span class="category-text">Mixed</span><br><span class="category-subtext">Pickles</span></a>
+          </div>
+      </div>
+      <div class="product-flex">
+          <div class="Vegetable" id="Vegetable">
+              <!-- Product Cards -->
+              <div class="product-list">
+                  <!-- Product 1 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/mango.jpg" alt="Neem Soap">
+                      <h3>Mango Pickle</h3>
+                      <p class="price">₹ 120</p><br>
+                      <div class="rating">
+                          <span>★★★★☆</span><br><br>
+                          <span class="reviews">994 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                  <!-- Product 2 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/lemon.jpg" alt="Tulsi Soap">
+                      <h3>Lemon Pickle</h3>
+                      <p class="price">₹ 200</p><br>
+                      <div class="rating">
+                          <span>★★☆☆☆</span><br><br>
+                          <span class="reviews">994 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                  
+              </div>
+              <div class="product-list">
+                  <!-- Product 1 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/garlic.jpg" alt="Neem Soap">
+                      <h3>Garlic Pickle</h3>
+                      <p class="price">₹ 180</p><br>
+                      <div class="rating">
+                          <span>★★★☆☆</span><br><br>
+                          <span class="reviews">914 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                  <!-- Product 2 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/ginger.jpg" alt="Tulsi Soap">
+                      <h3>Ginger Pickles</h3>
+                      <p class="price">₹ 90</p><br>
+                      <div class="rating">
+                          <span>★★★★☆</span><br><br>
+                          <span class="reviews">894 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                  
+              </div>
+          </div>
+          <div class="Fruit" id="Fruit">
+              <!-- Product Cards -->
+              <div class="product-list">
+                  <!-- Product 1 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/fig.jpg" alt="Neem Soap">
+                      <h3>Fig Pickles</h3>
+                      <p class="price">₹ 180</p><br>
+                      <div class="rating">
+                          <span>★★☆☆☆</span><br><br>
+                          <span class="reviews">944 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                  <!-- Product 2 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/amla.jpg" alt="Tulsi Soap">
+                      <h3>Amla Pickles</h3>
+                      <p class="price">₹ 100</p><br>
+                      <div class="rating">
+                          <span>★★★☆☆</span><br><br>
+                          <span class="reviews">834 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                 
+              </div>
+              <div class="product-list">
+                  <!-- Product 1 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/sweet.jpg" alt="Neem Soap">
+                      <h3>Sweet Pickles</h3>
+                      <p class="price">₹ 300</p><br>
+                      <div class="rating">
+                          <span>★★★★☆</span><br><br>
+                          <span class="reviews">1024 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                  <!-- Product 2 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/gooseberry.jpg" alt="Tulsi Soap">
+                      <h3>Gooseberry Pickles</h3>
+                      <p class="price">₹ 80</p><br>
+                      <div class="rating">
+                          <span>★★★☆☆</span><br><br>
+                          <span class="reviews">394 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                 
+              </div>
+          </div>
+          <div class="Oil" id="Oil">
+              <!-- Product Cards -->
+              <div class="product-list">
+                  <!-- Product 1 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/karendo.jpg" alt="Neem Soap">
+                      <h3>Karendo Pickles</h3>
+                      <p class="price">₹ 120</p><br>
+                      <div class="rating">
+                          <span>★★★☆☆</span><br><br>
+                          <span class="reviews">764 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                  <!-- Product 2 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/aanlo.jpg" alt="Tulsi Soap">
+                      <h3>Aonla Pickles</h3>
+                      <p class="price">₹ 200</p><br>
+                      <div class="rating">
+                          <span>★★☆☆☆</span><br><br>
+                          <span class="reviews">694 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                  
+              </div>
+              <div class="product-list">
+                  <!-- Product 1 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/cauli.jpg" alt="Neem Soap">
+                      <h3>Cauliflower Pickles </h3>
+                      <p class="price">₹ 180</p><br>
+                      <div class="rating">
+                          <span>★★★★☆</span><br><br>
+                          <span class="reviews">876 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                  <!-- Product 2 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/lime.jpg" alt="Tulsi Soap">
+                      <h3>lime Pickles</h3>
+                      <p class="price">₹ 90</p><br>
+                      <div class="rating">
+                          <span>★★★★☆</span><br><br>
+                          <span class="reviews">980 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                  
+              </div>
+          </div>
+          <div class="Indian" id="Indian">
+              <!-- Product Cards -->
+              <div class="product-list">
+                  <!-- Product 1 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/gooseberry.jpg" alt="Neem Soap">
+                      <h3>Pickles Gooseberry </h3>
+                      <p class="price">₹ 320</p><br>
+                      <div class="rating">
+                          <span>★★☆☆☆</span><br><br>
+                          <span class="reviews">544 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                  <!-- Product 2 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/assorted.jpg" alt="Tulsi Soap">
+                      <h3>Assorted Pickles</h3>
+                      <p class="price">₹ 280</p><br>
+                      <div class="rating">
+                          <span>★★★★☆</span><br><br>
+                          <span class="reviews">494 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                 
+              </div>
+              <div class="product-list">
+                  <!-- Product 1 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/carrot.jpg" alt="Neem Soap">
+                      <h3>Carrot Pickles</h3>
+                      <p class="price">₹ 520</p><br>
+                      <div class="rating">
+                          <span>★★★☆☆</span><br><br>
+                          <span class="reviews">904 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                  <!-- Product 2 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/greenchilli.jpg" alt="Tulsi Soap">
+                      <h3>Greenchilli Pickles</h3>
+                      <p class="price">₹ 420</p><br>
+                      <div class="rating">
+                          <span>★★★☆☆</span><br><br>
+                          <span class="reviews">774 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                 
+              </div>
+          </div>
+          <div class="Mixed" id="Mixed">
+              <!-- Product Cards -->
+              <div class="product-list">
+                  <!-- Product 1 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/sweetmix.jpg" alt="Neem Soap">
+                      <h3>Sweet mixed Pickles</h3>
+                      <p class="price">₹ 520</p><br>
+                      <div class="rating">
+                          <span>★★★★☆</span><br><br>
+                          <span class="reviews">874 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                  <!-- Product 2 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/spicemix.jpg" alt="Tulsi Soap">
+                      <h3>Spicy mixed Pickles</h3>
+                      <p class="price">₹ 280</p><br>
+                      <div class="rating">
+                          <span>★★☆☆☆</span><br><br>
+                          <span class="reviews">976 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                
+              </div>
+              <div class="product-list">
+                  <!-- Product 1 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/mix veg.jpg" alt="Neem Soap">
+                      <h3>Mixed Vegetable Pickles</h3>
+                      <p class="price">₹ 120</p><br>
+                      <div class="rating">
+                          <span>★★★★☆</span><br><br>
+                          <span class="reviews">994 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                  <!-- Product 2 -->
+                  <div class="product-card">
+                      <img src="/HOMEMADE/Images/pickle/brined.jpg" alt="Tulsi Soap">
+                      <h3>Brined Pickles</h3>
+                      <p class="price">₹ 560</p><br>
+                      <div class="rating">
+                          <span>★★★★★</span><br><br>
+                          <span class="reviews">784 reviews</span>
+                      </div><br><br>
+                      <button class="add-to-bag">ADD TO BAG</button>
+                  </div>
+
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+</html>

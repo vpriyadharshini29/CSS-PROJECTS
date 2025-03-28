@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        body {
+
+            background-color: rgb(251, 242, 239);
+
+
+            height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .header-top {
+            background-color: rgb(251, 242, 239);
+            border-bottom: 1px solid #8b0000;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 12px;
+            color: #8b0000;
+        }
+
+        .header-top a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Main Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            background-color: rgb(251, 242, 239);
+        }
+
+        .header h1 {
+            font-family: "Moon Dance", cursive;
+            font-weight: 400;
+            font-style: italic;
+            font-variation-settings:
+                "wdth" 100;
+            color: #8b0000;
+            font-size: 52px;
+            margin-left: 560px;
+            text-align: center;
+        }
+
+        /* Icons and Links */
+        .icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            float: right;
+        }
+
+        .icon-item {
+            display: flex;
+            align-items: center;
+            color: #004d00;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .icon-item i {
+            font-size: 20px;
+            margin-right: 8px;
+            color: #8b0000;
+        }
+
+        .icon-item:hover {
+            color: #8b0000;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Search Bar */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .search-bar {
+            width: 700px;
+            padding: 10px;
+            border: 2px solid #8b0000;
+            border-radius: 5px 0 0 5px;
+            font-size: 16px;
+            color: #8b0000;
+            outline: none;
+        }
+
+        .search-bar::placeholder {
+            color: #8b0000;
+        }
+
+        .search-btn {
+            background-color: #8b0000;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-btn:hover {
+            background-color: #006600;
+        }
+
+        .search-btn i {
+            font-size: 16px;
+        }
+
+        /* Nav Bar */
+        .nav {
+            display: flex;
+            /* justify-content: center; */
+            background-color: rgb(251, 242, 239);
+            border-top: 1px solid #e6e6e6;
+            padding: 10px 0;
+        }
+
+        .nav-item {
+            margin: 0 20px;
+            font-weight: bold;
+            color: #4d2900;
+            text-transform: uppercase;
+            font-size: 16px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            background-color: rgb(251, 242, 239);
+        }
+
+        .nav-item:hover {
+            color: #8b0000;
+            background-color: #f8fdf2;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: rgb(251, 242, 239);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .container .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .container .header h1 {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 2.5em;
+            color: #802200;
+            margin: 0;
+        }
+
+        .container .header a {
+            text-decoration: none;
+            color: #001aff69;
+            font-size: 0.9em;
+        }
+
+        .order-item {
+            background-color: white;
+            /* Light bluish background */
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            border: 2px solid black;
+        }
+
+        .order-item img {
+            width: 80px;
+            margin-right: 15px;
+        }
+
+        .order-details {
+            flex-grow: 1;
+        }
+
+        .order-details p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        .order-details .product-name {
+            font-weight: bold;
+        }
+
+        .order-details .price {
+            color: #f88400;
+            font-family: 'Times New Roman', serif;
+        }
+
+
+        .order-status {
+            display: flex;
+            align-items: center;
+        }
+
+        .order-status p {
+            margin: 5px 15px;
+            font-size: 0.9em;
+        }
+
+        .order-status .status {
+            font-weight: bold;
+            color: #f88400;
+        }
+
+        .order-status .track-link {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 0.9em;
+            margin-left: auto;
+        }
+
+        /* Adjust spacing and alignment to match the image */
+        .order-item {
+            align-items: flex-start;
+            /* Align items to the top */
+        }
+
+        .order-status {
+            display: flex;
+            /* Stack status details vertically */
+            align-items: flex-start;
+            /* Align status details to the left */
+            column-gap: 50px;
+        }
+
+        .order-status p {
+            margin: 2px 15px;
+            /* Reduce vertical spacing */
+        }
+
+        .order-status .track-link {
+            margin-top: 5px;
+            /* Add some space above the track link */
+        }
+
+        .order-details {
+            width: 200px;
+            /* Set a fixed width for the order details */
+        }
+
+        .order-status {
+            width: 350px;
+            /* Set a fixed width for the order status */
+        }
+
+        .footer {
+            background-color: #F2C9B8;
+            /* Light peach background */
+            padding: 20px 0;
+            color: #006400;
+            /* Dark green text */
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            border-top: 1px solid black;
+            /* Black border on top */
+        }
+
+        .footer a {
+            color: #006400;
+            /* Dark green links */
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-section {
+            text-align: left;
+        }
+
+        .footer-section h3 {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #8B0000;
+            /* Dark red for headings */
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 5px;
+        }
+
+        .footer-social {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-social img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .footer-logo {
+            font-family: 'Brush Script MT', cursive;
+            /* Example font, adjust as needed */
+            font-size: 2em;
+            color: #006400;
+            /* Dark green logo text */
+        }
+
+        /* Social media icons (replace with your actual icons) */
+        .social-icon {
+            width: 10px;
+            height: 30px;
+            background-color: white;
+            /* White background for icons */
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        /* Example styling for the logo */
+        .footer-logo {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 2em;
+            color: #006400;
+        }
+
+        @media screen and (max-width:600px) {
+            .header-top {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 100px;
+
+
+            }
+
+            .header h1 {
+
+
+                font-size: 32px;
+                margin-left: 50px;
+
+                text-align: center;
+            }
+
+
+            .icons {
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+            .icon-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .icon-item i {
+                font-size: 20px;
+                margin-right: 8px;
+
+            }
+
+
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            .search-container {
+                display: flex;
+
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .search-bar {
+                width: 250px;
+                padding: 10px;
+
+            }
+
+
+
+
+
+
+
+            .nav {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+            }
+
+            .container {
+                width: 100%;
+                margin: 0px;
+
+            }
+
+            .container .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+
+
+
+
+            .order-item {
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 2px solid black;
+            }
+
+            .order-item img {
+                width: 100%;
+                margin-right: 0px;
+            }
+
+            .order-details {
+                flex-grow: 1;
+            }
+
+            .order-details p {
+                margin: 0px 0;
+
+            }
+
+
+
+
+
+
+            .order-status {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .order-status p {
+                margin: 0px 3px;
+
+            }
+
+
+
+            .order-status .track-link {
+
+                margin-left: 0px;
+            }
+
+
+            .order-item {
+                align-items: flex-start;
+                /* Align items to the top */
+            }
+
+            .order-status {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                column-gap: 50px;
+            }
+
+            .order-status p {
+                margin: 0px 3px;
+                /* Reduce vertical spacing */
+            }
+
+            .order-status .track-link {
+                margin-top: 5px;
+                /* Add some space above the track link */
+            }
+
+            .order-details {
+                width: 100%;
+                /* Set a fixed width for the order details */
+            }
+
+            .order-status {
+                width: 100%;
+                /* Set a fixed width for the order status */
+            }
+
+            .footer {
+
+                padding: 20px 0;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+            }
+
+
+
+
+
+
+
+            .footer-social {
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+
+
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 1024px) {
+            .header-top {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 100px;
+
+
+            }
+
+            .header h1 {
+
+
+                font-size: 32px;
+                margin-left: 50px;
+
+                text-align: center;
+            }
+
+
+            .icons {
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+            .icon-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .icon-item i {
+                font-size: 20px;
+                margin-right: 8px;
+
+            }
+
+
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            .search-container {
+                display: flex;
+
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .search-bar {
+                width: 300px;
+                padding: 10px;
+
+            }
+
+
+
+
+
+
+
+            .nav {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+            }
+
+            .container {
+                width: 100%;
+                margin: 0px;
+
+            }
+
+            .container .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+
+
+
+
+            .order-item {
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 2px solid black;
+            }
+
+            .order-item img {
+                width: 100%;
+                margin-right: 0px;
+            }
+
+            .order-details {
+                flex-grow: 1;
+            }
+
+            .order-details p {
+                margin: 0px 0;
+
+            }
+
+
+
+
+
+
+            .order-status {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .order-status p {
+                margin: 0px 3px;
+
+            }
+
+
+
+            .order-status .track-link {
+
+                margin-left: 0px;
+            }
+
+
+            .order-item {
+                align-items: flex-start;
+                /* Align items to the top */
+            }
+
+            .order-status {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                column-gap: 50px;
+            }
+
+            .order-status p {
+                margin: 0px 3px;
+                /* Reduce vertical spacing */
+            }
+
+            .order-status .track-link {
+                margin-top: 5px;
+                /* Add some space above the track link */
+            }
+
+            .order-details {
+                width: 100%;
+                /* Set a fixed width for the order details */
+            }
+
+            .order-status {
+                width: 100%;
+                /* Set a fixed width for the order status */
+            }
+
+            .footer {
+
+                padding: 20px 0;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+            }
+
+
+
+
+
+
+
+            .footer-social {
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Top -->
+    <div class="header-top">
+        UP TO 40 % OFF | <a href="#">SHOP NOW</a>
+        <div class="icons">
+            <a href="/HOMEMADE/Pages/track orders.html" class="icon-item"><i class="fa fa-gift"
+                    style="font-size:24px"></i> Orders</a>
+            <a href="/HOMEMADE/Pages/Login page.html" class="icon-item"> &#x1F464; Login</a>
+            <a href="/HOMEMADE/Pages/order page.html" class="icon-item"><i class="fa fa-shopping-cart"></i> Cart</a>
+        </div>
+
+    </div>
+
+    <!-- Main Header -->
+    <div class="header">
+        <a href="/HOMEMADE/Pages/Handmade.html">
+            <h1>Purely Handmade</h1>
+        </a>
+
+    </div>
+
+    <div class="navbar"> <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search for Products">
+            <button class="search-btn"><i class="material-icons" style="font-size:36px"></i> </button>
+        </div>
+
+        <!-- Nav Bar -->
+        <div class="nav">
+            <a href="/HOMEMADE/Pages/soap page.html" class="nav-item">Soap</a>
+            <a href="/HOMEMADE/Pages/oil page.html" class="nav-item">Oil</a>
+            <a href="/HOMEMADE/Pages/Shampoo page.html" class="nav-item">Shampoo</a>
+            <a href="/HOMEMADE/Pages/Candle page.html" class="nav-item">Candle</a>
+            <a href="/HOMEMADE/Pages/Pickle Page.html" class="nav-item">Pickle</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>ORDERS</h1>
+            <a href="#">Continue Shopping</a>
+        </div>
+
+        <div class="order-item">
+            <img src="/HOMEMADE/Images/soap/orange.png" alt="Orange Soap">
+            <div class="order-details">
+                <p class="product-name">Natural Soap: Orange Extracted</p>
+                <p class="price">Rs. 800</p>
+            </div>
+            <div class="order-status">
+                <h3>
+                    <p>Status: </p>
+                    <span class="status">In-Transit</span>
+                </h3>
+                <p>Delivery Expected by: 24 March 2025</p>
+                <h2> <a href="/HOMEMADE/Pages/shipping page .html" class="track-link">Track</a></h2>
+
+            </div>
+        </div>
+
+        <div class="order-item">
+            <img src="/HOMEMADE/Images/soap/badam.png" alt="Badam Soap">
+            <div class="order-details">
+                <p class="product-name">Badam Infused Soap</p>
+                <h4>
+                    <p class="price">Rs. 800</p>
+                </h4>
+            </div>
+            <div class="order-status">
+                <h3>
+                    <p>Status: </p>
+                    <span class="status">Delivered</span>
+                </h3>
+                <p>Delivered On: 14 Febraury 2025</p>
+                <a href="/HOMEMADE/Pages/payment successful page.html" class="track-link">Payment</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-social">
+            <div class="footer-logo">Purely Handmade</div><br>
+            <div class="social-icons">
+                <img src="/HOMEMADE/Images/fb (1).png" alt="Facebook" class="social-icon">
+                <img src="/HOMEMADE/Images/insta.png" alt="Instagram" class="social-icon">
+                <img src="/HOMEMADE/Images/whatsp.png" alt="Chat" class="social-icon">
+                <img src="/HOMEMADE/Images/twitter.png" alt="Twitter" class="social-icon">
+                <img src="/HOMEMADE/Images/linkin.png" alt="LinkedIn" class="social-icon">
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Products By Category</h3>
+            <ul>
+                <li><a href="#">Soap</a></li>
+                <li><a href="#">Oil</a></li>
+                <li><a href="#">Shampoo</a></li>
+                <li><a href="#">Candle</a></li>
+                <li><a href="#">Pickle</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">For Partners</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">UnSubscribe</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Products By Type</h3>
+            <ul>
+                <li><a href="#">Skin Care</a></li>
+                <li><a href="#">Coconut Free</a></li>
+                <li><a href="#">Shea Butter Free</a></li>
+                <li><a href="#">Tree nut Free</a></li>
+                <li><a href="#">Gluten Free</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create an Account</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Playfair Display", serif;
+            font-optical-sizing: auto;
+
+            font-style: italic;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(251, 219, 188);
+
+
+            height: 100vh;
+        }
+
+        .header-top {
+            background-color: rgb(251, 219, 188);
+            border-bottom: 1px solid #8b0000;
+            text-align: center;
+            padding: 5px 0;
+            font-size: 12px;
+            color: #8b0000;
+        }
+
+        .header-top a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Main Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            background-color: rgb(251, 219, 188);
+        }
+
+        .header h1 {
+            font-family: "Moon Dance", cursive;
+            font-weight: 400;
+            font-style: italic;
+            font-variation-settings:
+                "wdth" 100;
+            color: #8b0000;
+            font-size: 52px;
+            margin-left: 560px;
+            text-align: center;
+        }
+            /* Icons and Links */
+            .icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            float: right;
+        }
+
+        .icon-item {
+            display: flex;
+            align-items: center;
+            color: #004d00;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .icon-item i {
+            font-size: 20px;
+            margin-right: 8px;
+            color: #8b0000;
+        }
+
+        .icon-item:hover {
+            color: #8b0000;
+        }
+        .account-box{
+            height: 90vh;
+            width:80vw;
+            background-image: url(/HOMEMADE/Images/create\ an\ account.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-left:12% ;
+            position: relative;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255,0.7);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            position: absolute;
+            top: 5%;
+            left: 8%;
+            
+
+        }
+
+        h1 {
+            font-family: 'Brush Script MT', cursive; /* Match the cursive font */
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .login-link {
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        .login-link a {
+            color: #ff9800; /* Match the orange color */
+            text-decoration: none;
+        }
+
+        .input-group {
+            text-align: left;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .input-group input {
+            width: calc(100% - 30px); /* Adjust width for icon */
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            outline: none;
+        }
+
+        .input-group .icon {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+        }
+
+        .get-started-button {
+            background-color: #ff9800; /* Match the orange color */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1em;
+            width: 100%;
+        }
+
+        /* Approximate icons with Unicode characters */
+        .input-group .icon.user::before {
+            content: "\uD83D\uDC64"; /* User icon */
+        }
+
+        .input-group .icon.email::before {
+            content: "\uD83D\uDCE7"; /* Email icon */
+        }
+
+        .input-group .icon.lock::before {
+            content: "\uD83D\uDD12"; /* Lock icon */
+        }
+
+        .input-group .icon.phone::before {
+            content: "\uD83D\uDCDE"; /* Phone icon */
+        }
+
+        /* Adjust input field text to match the image */
+        input::placeholder {
+            color: #999; /* Light grey placeholder */
+            font-style: italic; /* Placeholder is in italics */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"] {
+            font-family: 'Times New Roman', serif; /* Match the input text font */
+            font-size: 1em; /* Match the input text size */
+        }
+        .footer {
+  background-color: #F2C9B8; /* Light peach background */
+  padding: 20px 0;
+  color: #006400; /* Dark green text */
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  border-top: 1px solid black; /* Black border on top */
+}
+
+.footer a {
+  color: #006400; /* Dark green links */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-section {
+  text-align: left;
+}
+
+.footer-section h3 {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #8B0000; /* Dark red for headings */
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 5px;
+}
+
+.footer-social {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.footer-logo {
+  font-family: 'Brush Script MT', cursive; /* Example font, adjust as needed */
+  font-size: 2em;
+  color: #006400; /* Dark green logo text */
+}
+
+/* Social media icons (replace with your actual icons) */
+.social-icon {
+  width: 10px;
+  height: 30px;
+  background-color: white; /* White background for icons */
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Example styling for the logo */
+.footer-logo {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2em;
+  color: #006400;
+}
+@media screen  and (max-width:600px)
+{
+  .header-top {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+
+
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 100px;
+
+
+            }
+
+            .header h1 {
+
+
+                font-size: 32px;
+                margin-left: 20px;
+
+                text-align: center;
+            }
+
+
+            .icons {
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+            .icon-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .icon-item i {
+                font-size: 20px;
+                margin-right: 8px;
+
+            }
+            .account-box{
+            height: 700px;
+            width:100%;
+            background-image: url(/HOMEMADE/Images/create\ an\ account.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+           margin-left: 0%;
+            position: relative;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255,0.7);
+            padding: 30px;
+         
+            height: 680px;
+            width: 90%;
+            position: absolute;
+            top: 2%;
+            left: 1%;
+            
+
+        }
+
+        h1 {
+           
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .login-link {
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        .login-link a {
+            color: #ff9800; /* Match the orange color */
+            text-decoration: none;
+        }
+
+        .input-group {
+            text-align: left;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .input-group input {
+            width: calc(100% - 30px); /* Adjust width for icon */
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            outline: none;
+        }
+
+        .input-group .icon {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+        }
+
+        .get-started-button {
+            background-color: #ff9800; /* Match the orange color */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1em;
+            width: 100%;
+        }
+
+        /* Approximate icons with Unicode characters */
+        .input-group .icon.user::before {
+            content: "\uD83D\uDC64"; /* User icon */
+        }
+
+        .input-group .icon.email::before {
+            content: "\uD83D\uDCE7"; /* Email icon */
+        }
+
+        .input-group .icon.lock::before {
+            content: "\uD83D\uDD12"; /* Lock icon */
+        }
+
+        .input-group .icon.phone::before {
+            content: "\uD83D\uDCDE"; /* Phone icon */
+        }
+
+        /* Adjust input field text to match the image */
+        input::placeholder {
+            color: #999; /* Light grey placeholder */
+            font-style: italic; /* Placeholder is in italics */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"] {
+            font-family: 'Times New Roman', serif; /* Match the input text font */
+            font-size: 1em; /* Match the input text size */
+        }
+            .footer {
+
+padding: 0px 0;
+
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+
+}
+
+
+
+
+
+
+
+.footer-social {
+text-align: left;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+
+
+}
+@media screen and (min-width: 601px) and (max-width: 1024px){
+    .header-top {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+
+
+
+            .header {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                height: 100px;
+
+
+            }
+
+            .header h1 {
+
+
+                font-size: 32px;
+                margin-left: 20px;
+
+                text-align: center;
+            }
+
+
+            .icons {
+                display: flex;
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+            .icon-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
+
+            .icon-item i {
+                font-size: 20px;
+                margin-right: 8px;
+
+            }
+            .account-box{
+            height: 700px;
+            width:100%;
+            background-image: url(/HOMEMADE/Images/create\ an\ account.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+           margin-left: 0%;
+            position: relative;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255,0.7);
+            padding: 30px;
+         
+            height: 680px;
+            width: 90%;
+            position: absolute;
+            top: 2%;
+            left: 1%;
+            
+
+        }
+
+        h1 {
+           
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .login-link {
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        .login-link a {
+            color: #ff9800; /* Match the orange color */
+            text-decoration: none;
+        }
+
+        .input-group {
+            text-align: left;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .input-group input {
+            width: calc(100% - 30px); /* Adjust width for icon */
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            outline: none;
+        }
+
+        .input-group .icon {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+        }
+
+        .get-started-button {
+            background-color: #ff9800; /* Match the orange color */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1em;
+            width: 100%;
+        }
+
+        /* Approximate icons with Unicode characters */
+        .input-group .icon.user::before {
+            content: "\uD83D\uDC64"; /* User icon */
+        }
+
+        .input-group .icon.email::before {
+            content: "\uD83D\uDCE7"; /* Email icon */
+        }
+
+        .input-group .icon.lock::before {
+            content: "\uD83D\uDD12"; /* Lock icon */
+        }
+
+        .input-group .icon.phone::before {
+            content: "\uD83D\uDCDE"; /* Phone icon */
+        }
+
+        /* Adjust input field text to match the image */
+        input::placeholder {
+            color: #999; /* Light grey placeholder */
+            font-style: italic; /* Placeholder is in italics */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"] {
+            font-family: 'Times New Roman', serif; /* Match the input text font */
+            font-size: 1em; /* Match the input text size */
+        }
+            .footer {
+
+padding: 0px 0;
+
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+
+}
+
+
+
+
+
+
+
+.footer-social {
+text-align: left;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+
+
+    
+}
+    </style>
+</head>
+<body>
+    <!-- Header Top -->
+    <div class="header-top">
+      UP TO 40 % OFF | <a href="#">SHOP NOW</a>
+      <div class="icons">
+          <a href="/HOMEMADE/Pages/track orders.html" class="icon-item"><i class="fa fa-gift" style="font-size:24px"></i> Orders</a>
+          <a href="/HOMEMADE/Pages/Login page.html" class="icon-item"> &#x1F464; Login</a>
+          <a href="/HOMEMADE/Pages/order page.html" class="icon-item"><i class="fa fa-shopping-cart"></i> Cart</a>
+      </div>
+     
+  </div>
+
+  <!-- Main Header -->
+  <div class="header">
+     <a href="/HOMEMADE/Pages/Handmade.html"> <h1>Purely Handmade</h1></a>
+    
+    </div>
+    <div class="account-box">
+    <div class="container">
+        <h1>Create an Account</h1>
+        <p class="login-link">Already have an account? <a href="/HOMEMADE/Pages/Login page.html">log in</a></p>
+
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Username">
+            <!-- <span class="icon user"></span> -->
+        </div>
+
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email">
+            <!-- <span class="icon email"></span> -->
+        </div>
+
+        <div class="input-group">
+            <label for="password">Create Password</label>
+            <input type="password" id="password" name="password" placeholder="Create Password">
+            <!-- <span class="icon lock"></span> -->
+        </div>
+
+        <div class="input-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone">
+            <!-- <span class="icon phone"></span> -->
+        </div>
+
+        <button class="get-started-button">Get Started</button>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-social">
+      <div class="footer-logo">Purely Handmade</div><br>
+     <div class="social-icons">
+      <img src="/HOMEMADE/Images/fb (1).png" alt="Facebook" class="social-icon"> 
+      <img src="/HOMEMADE/Images/insta.png" alt="Instagram" class="social-icon">
+      <img src="/HOMEMADE/Images/whatsp.png" alt="Chat" class="social-icon">
+      <img src="/HOMEMADE/Images/twitter.png" alt="Twitter" class="social-icon">
+      <img src="/HOMEMADE/Images/linkin.png" alt="LinkedIn" class="social-icon">
+    </div>
+    </div>
+  
+    <div class="footer-section">
+      <h3>Products By Category</h3>
+      <ul>
+        <li><a href="#">Soap</a></li>
+        <li><a href="#">Oil</a></li>
+        <li><a href="#">Shampoo</a></li>
+        <li><a href="#">Candle</a></li>
+        <li><a href="#">Pickle</a></li>
+      </ul>
+    </div>
+  
+    <div class="footer-section">
+      <h3>Company</h3>
+      <ul>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">For Partners</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">UnSubscribe</a></li>
+      </ul>
+    </div>
+  
+    <div class="footer-section">
+      <h3>Products By Type</h3>
+      <ul>
+        <li><a href="#">Skin Care</a></li>
+        <li><a href="#">Coconut Free</a></li>
+        <li><a href="#">Shea Butter Free</a></li>
+        <li><a href="#">Tree nut Free</a></li>
+        <li><a href="#">Gluten Free</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

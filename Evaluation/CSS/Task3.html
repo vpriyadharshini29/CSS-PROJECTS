@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .floating-label {
+            position: relative;
+            /* margin-bottom: 20px; */
+        }
+
+        .floating-label input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .floating-label label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 14px;
+            transition: 0.3s ease;
+            pointer-events: none;
+        }
+
+        .floating-label input:focus + label,
+        .floating-label input:not(:placeholder-shown) + label {
+            top: -10px;
+            left: 10px;
+            font-size: 12px;
+            background: white;
+            padding: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-label">
+        <input type="text" placeholder="placeholder " id="name">
+        <label for="name">Your Name</label>
+    </div>
+</body>
+</html>
